@@ -4,106 +4,90 @@ import type { CollectionEntry } from 'astro:content'
 import BaseLayout from '@layouts/BaseLayout.astro'
 import { formatDate } from '@support/time'
 import { SITE } from '@/config'
+import avatarSrc from '@images/brand_logo.jpeg'
 
 const allPosts: CollectionEntry<'posts'>[] = (await getCollection('posts')).sort(
     (a: CollectionEntry<'posts'>, b: CollectionEntry<'posts'>) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 )
-const recentPosts = allPosts.slice(0, 6)
 
-const tagCounts = new Map<string, number>()
+const introText = SITE.shortDescription || SITE.description
+const displayTitle = SITE.title || SITE.author
+
+const timelineMap = new Map<number, CollectionEntry<'posts'>[]>()
 allPosts.forEach((post) => {
-    const tags = post.data.tags ?? [post.data.category]
-    tags.forEach((rawTag) => {
-        const tag = rawTag.trim()
-        if (!tag) {
-            return
-        }
-        tagCounts.set(tag, (tagCounts.get(tag) ?? 0) + 1)
-    })
+    const year = post.data.pubDate.getFullYear()
+    const list = timelineMap.get(year) ?? []
+    list.push(post)
+    timelineMap.set(year, list)
 })
 
-const tags = [...tagCounts.entries()]
-    .sort((a, b) => b[1] - a[1])
-    .slice(0, 12)
-    .map(([tag, count]) => ({
-        tag,
-        count,
-        slug: encodeURIComponent(tag),
-    }))
+const timeline = [...timelineMap.entries()].map(([year, posts]) => ({
+    year,
+    posts,
+}))
 ---
 
 <BaseLayout>
     <section class="relative">
-        <div class="max-w-3xl">
-            {SITE.title && (
-                <h1 class="font-display text-4xl tracking-tight text-neutral-900 sm:text-5xl">
-                    {SITE.title}
-                </h1>
-            )}
-            {SITE.description && (
-                <p class="mt-4 text-pretty text-lg text-neutral-600">
-                    {SITE.description}
-                </p>
-            )}
+        <div class="flex max-w-3xl flex-col gap-4">
+            <div class="flex items-center gap-4">
+                <img
+                    class="h-16 w-16 rounded-full border border-neutral-200 object-cover"
+                    src={avatarSrc.src}
+                    alt={displayTitle || 'Avatar'}
+                    loading="eager"
+                />
+                <div class="leading-tight">
+                    {displayTitle && (
+                        <h1 class="font-display text-3xl tracking-tight text-neutral-900 sm:text-4xl">
+                            {displayTitle}
+                        </h1>
+                    )}
+                    {introText && (
+                        <p class="mt-2 text-pretty text-sm text-neutral-600 sm:text-base">
+                            {introText}
+                        </p>
+                    )}
+                </div>
+            </div>
         </div>
     </section>
 
     {
-        recentPosts.length > 0 && (
-            <section class="mt-12">
-                <div class="divide-y divide-neutral-200/80 border-t border-neutral-200/80">
-                    {recentPosts.map(post => (
-                        <article class="group py-6">
-                            <div class="flex flex-col gap-3 md:flex-row md:items-baseline md:justify-between">
-                                <div class="max-w-3xl">
-                                    <a
-                                        class="font-display text-xl text-neutral-900 transition group-hover:text-neutral-600"
-                                        href={`/posts/${post.slug}/`}
-                                        data-astro-prefetch
-                                    >
-                                        {post.data.title}
-                                    </a>
-                                    <p class="mt-2 text-sm text-neutral-600">
-                                        {post.data.description}
-                                    </p>
-                                    <div class="mt-3 flex flex-wrap gap-2">
-                                        {(post.data.tags ?? [post.data.category]).map(tag => (
+        timeline.length > 0 && (
+            <section class="mt-10 space-y-10">
+                {timeline.map(({ year, posts }) => (
+                    <div>
+                        <h2 class="text-xs uppercase tracking-[0.35em] text-neutral-500">
+                            {year}
+                        </h2>
+                        <div class="mt-4 divide-y divide-neutral-200/80 border-t border-neutral-200/80">
+                            {posts.map(post => (
+                                <article class="group py-5">
+                                    <div class="flex flex-col gap-2 md:flex-row md:items-baseline md:justify-between">
+                                        <div class="max-w-3xl">
                                             <a
-                                                class="rounded-full border border-neutral-200 px-3 py-1 text-[11px] uppercase tracking-[0.25em] text-neutral-500 transition hover:border-neutral-400 hover:text-neutral-900"
-                                                href={`/tags/${encodeURIComponent(tag)}/`}
+                                                class="font-display text-lg text-neutral-900 transition group-hover:text-neutral-600"
+                                                href={`/posts/${post.slug}/`}
                                                 data-astro-prefetch
                                             >
-                                                {tag}
+                                                {post.data.title}
                                             </a>
-                                        ))}
+                                            {post.data.description && (
+                                                <p class="mt-2 text-sm text-neutral-600">
+                                                    {post.data.description}
+                                                </p>
+                                            )}
+                                        </div>
+                                        <time class="text-xs uppercase tracking-[0.35em] text-neutral-500">
+                                            {formatDate(post.data.pubDate)}
+                                        </time>
                                     </div>
-                                </div>
-                                <time class="text-xs uppercase tracking-[0.35em] text-neutral-500">
-                                    {formatDate(post.data.pubDate)}
-                                </time>
-                            </div>
-                        </article>
-                    ))}
-                </div>
-            </section>
-        )
-    }
-
-    {
-        tags.length > 0 && (
-            <section class="mt-12">
-                <div class="flex flex-wrap gap-3">
-                    {tags.map(({ tag, count, slug }) => (
-                        <a
-                            class="group flex items-center gap-2 rounded-full border border-neutral-200 px-4 py-2 text-sm text-neutral-700 transition hover:border-neutral-500 hover:text-neutral-900"
-                            href={`/tags/${slug}/`}
-                            data-astro-prefetch
-                        >
-                            <span class="font-display">{tag}</span>
-                            <span class="text-xs uppercase tracking-[0.25em] text-neutral-500">{count}</span>
-                        </a>
-                    ))}
-                </div>
+                                </article>
+                            ))}
+                        </div>
+                    </div>
+                ))}
             </section>
         )
     }
