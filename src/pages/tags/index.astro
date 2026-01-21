@@ -34,12 +34,12 @@ const tags = [...tagStats.entries()]
         slug: encodeURIComponent(tag),
     }))
 
-const description = 'Browse all tags and jump straight into each topic.'
+const description = '查看全部标签，按主题快速归档。'
 const URL = Astro.url.href
 ---
 
 <BaseLayout
-    title="Tags"
+    title="标签"
     description={description}
     structuredData={{
         '@context': 'https://schema.org',
@@ -47,7 +47,7 @@ const URL = Astro.url.href
         'inLanguage': 'en-US',
         '@id': URL,
         'url': URL,
-        'name': `All Tags - ${SITE.title}`,
+        'name': `标签 - ${SITE.title}`,
         'description': description,
         'isPartOf': {
             '@type': 'WebSite',
@@ -57,7 +57,7 @@ const URL = Astro.url.href
         },
     }}
 >
-    <MainSection title="Tags" subTitle={description} />
+    <MainSection title="标签" subTitle={description} />
 
     <section class="mx-auto max-w-5xl px-4 pb-12 sm:px-6 lg:px-8">
         <div class="flex flex-wrap gap-3">

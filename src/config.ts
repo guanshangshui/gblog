@@ -9,29 +9,27 @@ export const SITE: Site = {
 }
 
 export const NavigationLinks: NavigationLink[] = [
-    { name: 'Posts', url: '/posts/' },
-    { name: 'Category', url: '/categories/' },
-    { name: 'Tags', url: '/tags/' },
-    { name: 'Timeline', url: '/timeline/' },
-    { name: 'Friends', url: '/friends/' },
+    { name: '首页', url: '/' },
+    { name: '文章', url: '/posts/' },
+    { name: '标签', url: '/tags/' },
+    { name: '作品', url: '/friends/' },
 ]
 
 export const FooterLinks = [
     {
-        section: 'Blog',
+        section: '站点',
         links: [
-            { name: 'Posts', url: '/posts/' },
-            { name: 'Timeline', url: '/timeline/' },
-            { name: 'Categories', url: '/categories/' },
-            { name: 'Tags', url: '/tags/' },
-            { name: 'Friends', url: '/friends/' },
+            { name: '首页', url: '/' },
+            { name: '文章', url: '/posts/' },
+            { name: '标签', url: '/tags/' },
+            { name: '作品', url: '/friends/' },
         ],
     },
     {
-        section: 'Other',
+        section: '其他',
         links: [
             { name: 'RSS', url: '/rss.xml' },
-            { name: 'Site Map', url: '/sitemap-index.xml' },
+            { name: '站点地图', url: '/sitemap-index.xml' },
         ],
     },
 ]

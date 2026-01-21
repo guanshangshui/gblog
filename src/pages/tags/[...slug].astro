@@ -39,7 +39,7 @@ const posts: CollectionEntry<'posts'>[] = (await getCollection('posts')).sort(
 
 <BaseLayout
     title={tag}
-    description={`Posts tagged with "${tag}".`}
+    description={`标签「${tag}」下的文章。`}
     structuredData={{
         '@context': 'https://schema.org',
         '@type': 'WebPage',
@@ -47,19 +47,19 @@ const posts: CollectionEntry<'posts'>[] = (await getCollection('posts')).sort(
         '@id': URL,
         'url': URL,
         'name': `${tag} - ${SITE.title}`,
-        'description': `Posts tagged with "${tag}".`,
+        'description': `标签「${tag}」下的文章。`,
         'isPartOf': {
             '@type': 'WebSite',
             'url': tagsURL,
-            'name': `All Tags - ${SITE.title}`,
+            'name': `标签 - ${SITE.title}`,
         },
     }}
 >
     <MainSection
         title={tag}
-        subTitle={`Posts tagged with "${tag}".`}
+        subTitle={`标签「${tag}」下的文章。`}
         btnExists={true}
-        btnTitle="All Tags"
+        btnTitle="全部标签"
         btnURL="/tags"
     />
 

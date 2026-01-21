@@ -12,12 +12,12 @@ const posts: CollectionEntry<'posts'>[] = (await getCollection('posts')).sort(
 )
 
 const selectedPosts: CollectionEntry<'posts'>[] = posts.filter(p => p.data.selected)
-const description = 'Browse the full archive of posts, notes, and essays.'
+const description = '全部文章与笔记归档。'
 const URL = Astro.url.href
 ---
 
 <BaseLayout
-    title="All Blogs"
+    title="文章"
     description={description}
     structuredData={{
         '@context': 'https://schema.org',
@@ -25,7 +25,7 @@ const URL = Astro.url.href
         'inLanguage': 'en-US',
         '@id': URL,
         'url': URL,
-        'name': `All Blogs - ${SITE.title}`,
+        'name': `文章 - ${SITE.title}`,
         'description': description,
         'isPartOf': {
             '@type': 'WebSite',
@@ -36,11 +36,9 @@ const URL = Astro.url.href
     }}
 >
     <MainSection
-        title="All Posts"
-        subTitle="Every story, essay, and update in one place."
-        btnExists={true}
-        btnTitle="Timeline"
-        btnURL="/timeline"
+        title="文章"
+        subTitle="所有内容集中在这里。"
+        btnExists={false}
     />
 
     <BlogRecentCard blogs={posts} />
