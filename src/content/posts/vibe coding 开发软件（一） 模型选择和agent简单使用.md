@@ -2,7 +2,7 @@
 date_modified: 2026-01-21 15:46:15
 title: "Vibe Coding 开发软件（一）模型选择和 Agent 简单使用"
 description: "分享几个月高强度使用 AI 编程工具的开发经验，涵盖模型选择策略与 Agent 使用技巧"
-pubDate: "2025-01-08 18:07:44"
+pubDate: "2026-01-08 18:07:44"
 category: "ai开发"
 tags: ["vibe-coding", "AI编程", "Claude", "开发经验"]
 banner: "@images/ponyo.png"
