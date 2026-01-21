@@ -9,12 +9,12 @@ interface Props {
   noArrow?: boolean
 }
 
-const baseClasses = 'group inline-flex items-center justify-center gap-x-2 rounded-lg px-4 py-3 text-sm font-bold text-neutral-50 ring-zinc-500 transition duration-300 focus-visible:ring outline-none'
-const borderClasses = 'border border-transparent'
-const bgColorClasses = 'bg-orange-400 hover:bg-orange-500 active:bg-orange-500 dark:focus:outline-none'
+const baseClasses = 'group inline-flex items-center justify-center gap-x-2 rounded-full border border-neutral-300 px-5 py-2 text-xs uppercase tracking-[0.35em] text-neutral-700 transition focus-visible:ring outline-none'
+const borderClasses = 'hover:border-neutral-500'
+const bgColorClasses = 'hover:text-neutral-900'
 const disableClasses = 'disabled:pointer-events-none disabled:opacity-50'
-const fontSizeClasses = '2xl:text-base'
-const ringClasses = 'dark:ring-zinc-200';
+const fontSizeClasses = ''
+const ringClasses = 'ring-neutral-300';
 ---
 
 <a

@@ -21,3 +21,7 @@ pnpm-debug.log*
 .DS_Store
 
 .vscode
+
+src/content/posts/test-markdown.md
+
+.zed
