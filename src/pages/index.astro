@@ -13,18 +13,20 @@ const allPosts: CollectionEntry<'posts'>[] = (await getCollection('posts')).sort
 const introText = SITE.shortDescription || SITE.description
 const displayTitle = SITE.title || SITE.author
 
-const timelineMap = new Map<number, CollectionEntry<'posts'>[]>()
+const timelineMap = new Map<number, { label: string; posts: CollectionEntry<'posts'>[] }>()
 allPosts.forEach((post) => {
     const year = post.data.pubDate.getFullYear()
-    const list = timelineMap.get(year) ?? []
-    list.push(post)
-    timelineMap.set(year, list)
+    const month = String(post.data.pubDate.getMonth() + 1).padStart(2, '0')
+    const key = year * 100 + Number(month)
+    const label = `${year}-${month}`
+    const entry = timelineMap.get(key) ?? { label, posts: [] }
+    entry.posts.push(post)
+    timelineMap.set(key, entry)
 })
 
-const timeline = [...timelineMap.entries()].map(([year, posts]) => ({
-    year,
-    posts,
-}))
+const timeline = [...timelineMap.entries()]
+    .sort((a, b) => b[0] - a[0])
+    .map(([, value]) => value)
 ---
 
 <BaseLayout>
@@ -56,10 +58,10 @@ const timeline = [...timelineMap.entries()].map(([year, posts]) => ({
     {
         timeline.length > 0 && (
             <section class="mt-10 space-y-10">
-                {timeline.map(({ year, posts }) => (
+                {timeline.map(({ label, posts }) => (
                     <div>
                         <h2 class="text-xs uppercase tracking-[0.35em] text-neutral-500">
-                            {year}
+                            {label}
                         </h2>
                         <div class="mt-4 divide-y divide-neutral-200/80 border-t border-neutral-200/80">
                             {posts.map(post => (
