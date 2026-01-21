@@ -20,7 +20,7 @@ export async function getStaticPaths() {
     })
 
     return [...tags].map(tag => ({
-        params: { slug: encodeURIComponent(tag) },
+        params: { slug: tag },
         props: { tag },
     }))
 }
@@ -33,7 +33,9 @@ const tagsURL = `${Astro.url.origin}/tags`
 const posts: CollectionEntry<'posts'>[] = (await getCollection('posts')).sort(
     (a: CollectionEntry<'posts'>, b: CollectionEntry<'posts'>) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 ).filter((post) => {
-    const postTags = post.data.tags ?? [post.data.category]
+    const postTags = (post.data.tags ?? [post.data.category])
+        .map(rawTag => rawTag.trim())
+        .filter(Boolean)
     return postTags.includes(tag)
 })
 ---
