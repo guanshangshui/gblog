@@ -2,50 +2,109 @@
 import { getCollection } from 'astro:content'
 import type { CollectionEntry } from 'astro:content'
 import BaseLayout from '@layouts/BaseLayout.astro'
-import BlogInsight from '@components/blog/BlogInsight.astro'
-import HeroSection from '@components/ui/sections/HeroSection.astro'
-import FeaturesSection from '@components/ui/sections/FeaturesSection.astro'
-import HeroSectionAlt from '@components/ui/sections/HeroSectionAlt.astro'
-import blogHeroImg from '@images/home.png'
+import { formatDate } from '@support/time'
+import { SITE } from '@/config'
 
-const posts: CollectionEntry<'posts'>[] = (await getCollection('posts')).sort(
+const allPosts: CollectionEntry<'posts'>[] = (await getCollection('posts')).sort(
     (a: CollectionEntry<'posts'>, b: CollectionEntry<'posts'>) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
-).slice(0, 3);
+)
+const recentPosts = allPosts.slice(0, 6)
+
+const tagCounts = new Map<string, number>()
+allPosts.forEach((post) => {
+    const tags = post.data.tags ?? [post.data.category]
+    tags.forEach((rawTag) => {
+        const tag = rawTag.trim()
+        if (!tag) {
+            return
+        }
+        tagCounts.set(tag, (tagCounts.get(tag) ?? 0) + 1)
+    })
+})
+
+const tags = [...tagCounts.entries()]
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 12)
+    .map(([tag, count]) => ({
+        tag,
+        count,
+        slug: encodeURIComponent(tag),
+    }))
 ---
 
 <BaseLayout>
-    <HeroSection
-        title=`Hello, <span class="text-yellow-500 dark:text-yellow-400">Godruoyi</span>`
-        subTitle="Hi, I'm Lianbo, I enjoy the process of building something using any technology stack, welcome to my blog"
-        primaryBtn="Explore Posts"
-        primaryBtnURL="/posts"
-        src={blogHeroImg}
-        alt="godruoyi's blog"
-    />
-
-    <FeaturesSection />
-
-    <section class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full">
-        <div class="mx-auto mb-10 max-w-2xl text-center lg:mb-14">
-            <h2 class="text-3xl font-bold text-neutral-800 dark:text-neutral-200 md:text-4xl md:leading-tight">
-                Latest Post
-            </h2>
-            <p class="mt-1 text-pretty text-neutral-600 dark:text-neutral-400">
-                Always want to write something, but rarely actually do it
-            </p>
-        </div>
-        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {
-                posts.map(b => (
-                    <BlogInsight blog={b} />
-                ))
-            }
+    <section class="relative">
+        <div class="max-w-3xl">
+            {SITE.title && (
+                <h1 class="font-display text-4xl tracking-tight text-neutral-900 sm:text-5xl">
+                    {SITE.title}
+                </h1>
+            )}
+            {SITE.description && (
+                <p class="mt-4 text-pretty text-lg text-neutral-600">
+                    {SITE.description}
+                </p>
+            )}
         </div>
     </section>
 
-    <HeroSectionAlt
-        title="Fellow me on GitHub"
-        subTitle="I love open source and have some small tools on my GitHub. You can get me more by checking out my code"
-        url="https://github.com/godruoyi"
-    />
+    {
+        recentPosts.length > 0 && (
+            <section class="mt-12">
+                <div class="divide-y divide-neutral-200/80 border-t border-neutral-200/80">
+                    {recentPosts.map(post => (
+                        <article class="group py-6">
+                            <div class="flex flex-col gap-3 md:flex-row md:items-baseline md:justify-between">
+                                <div class="max-w-3xl">
+                                    <a
+                                        class="font-display text-xl text-neutral-900 transition group-hover:text-neutral-600"
+                                        href={`/posts/${post.slug}/`}
+                                        data-astro-prefetch
+                                    >
+                                        {post.data.title}
+                                    </a>
+                                    <p class="mt-2 text-sm text-neutral-600">
+                                        {post.data.description}
+                                    </p>
+                                    <div class="mt-3 flex flex-wrap gap-2">
+                                        {(post.data.tags ?? [post.data.category]).map(tag => (
+                                            <a
+                                                class="rounded-full border border-neutral-200 px-3 py-1 text-[11px] uppercase tracking-[0.25em] text-neutral-500 transition hover:border-neutral-400 hover:text-neutral-900"
+                                                href={`/tags/${encodeURIComponent(tag)}/`}
+                                                data-astro-prefetch
+                                            >
+                                                {tag}
+                                            </a>
+                                        ))}
+                                    </div>
+                                </div>
+                                <time class="text-xs uppercase tracking-[0.35em] text-neutral-500">
+                                    {formatDate(post.data.pubDate)}
+                                </time>
+                            </div>
+                        </article>
+                    ))}
+                </div>
+            </section>
+        )
+    }
+
+    {
+        tags.length > 0 && (
+            <section class="mt-12">
+                <div class="flex flex-wrap gap-3">
+                    {tags.map(({ tag, count, slug }) => (
+                        <a
+                            class="group flex items-center gap-2 rounded-full border border-neutral-200 px-4 py-2 text-sm text-neutral-700 transition hover:border-neutral-500 hover:text-neutral-900"
+                            href={`/tags/${slug}/`}
+                            data-astro-prefetch
+                        >
+                            <span class="font-display">{tag}</span>
+                            <span class="text-xs uppercase tracking-[0.25em] text-neutral-500">{count}</span>
+                        </a>
+                    ))}
+                </div>
+            </section>
+        )
+    }
 </BaseLayout>

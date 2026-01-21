@@ -1,0 +1,71 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro'
+import { type CollectionEntry, getCollection } from 'astro:content'
+import BlogCard from '@components/blog/BlogCard.astro'
+import MainSection from '@components/ui/sections/MainSection.astro'
+import { SITE } from '@/config'
+
+export async function getStaticPaths() {
+    const posts = await getCollection('posts')
+    const tags = new Set<string>()
+
+    posts.forEach((post) => {
+        const postTags = post.data.tags ?? [post.data.category]
+        postTags.forEach((rawTag) => {
+            const tag = rawTag.trim()
+            if (tag) {
+                tags.add(tag)
+            }
+        })
+    })
+
+    return [...tags].map(tag => ({
+        params: { slug: encodeURIComponent(tag) },
+        props: { tag },
+    }))
+}
+
+const { tag } = Astro.props
+const URL = Astro.url.href
+const tagsURL = `${Astro.url.origin}/tags`
+
+const posts: CollectionEntry<'posts'>[] = (await getCollection('posts')).sort(
+    (a: CollectionEntry<'posts'>, b: CollectionEntry<'posts'>) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+).filter((post) => {
+    const postTags = post.data.tags ?? [post.data.category]
+    return postTags.includes(tag)
+})
+---
+
+<BaseLayout
+    title={tag}
+    description={`Posts tagged with "${tag}".`}
+    structuredData={{
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        'inLanguage': 'en-US',
+        '@id': URL,
+        'url': URL,
+        'name': `${tag} - ${SITE.title}`,
+        'description': `Posts tagged with "${tag}".`,
+        'isPartOf': {
+            '@type': 'WebSite',
+            'url': tagsURL,
+            'name': `All Tags - ${SITE.title}`,
+        },
+    }}
+>
+    <MainSection
+        title={tag}
+        subTitle={`Posts tagged with "${tag}".`}
+        btnExists={true}
+        btnTitle="All Tags"
+        btnURL="/tags"
+    />
+
+    <section class="mx-auto max-w-5xl px-4 pb-12 sm:px-6 lg:px-8">
+        <div class="grid gap-6 grid-cols-1 sm:grid-cols-2">
+            {posts.map(post => <BlogCard blog={post} />)}
+        </div>
+    </section>
+</BaseLayout>

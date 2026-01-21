@@ -59,7 +59,7 @@ if (!socialImage.startsWith('http')) {
 <meta name="generator" content={Astro.generator} />
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 <meta name="mobile-web-app-capable" content="yes" />
-<meta name="theme-color" content="#facc15" />
+<meta name="theme-color" content="#ffffff" />
 
 <!-- Open Graph -->
 <meta property="og:type" content="website" />
@@ -83,6 +83,12 @@ if (!socialImage.startsWith('http')) {
 <meta property="twitter:image" content={socialImage} />
 
 <!-- Links -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600;9..144,700&family=Public+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+/>
 <link href={canonicalURL} rel="canonical" />
 <link rel="sitemap" href="/sitemap-index.xml" />
 <!--<link href="/manifest.json" rel="manifest" />-->

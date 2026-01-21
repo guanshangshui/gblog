@@ -11,24 +11,24 @@ interface Props {
     btnURL?: string
 }
 ---
-<section class="mx-auto mt-10 px-4 sm:px-6 lg:px-8 lg:pt-10 2xl:max-w-full max-w-[85rem]">
-    <div class="md:flex md:justify-between md:items-center flex-wrap">
-        <div class="w-full md:w-auto">
-            <h1 class="block text-balance text-4xl font-bold tracking-tight text-neutral-800 dark:text-neutral-200 md:text-5xl lg:text-6xl">
+<section class="mx-auto mt-10 max-w-5xl px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+        <div class="w-full">
+            <h1 class="font-display text-balance text-4xl tracking-tight text-neutral-900 sm:text-5xl">
                 {title}
             </h1>
-            <p class="mt-4 text-pretty text-lg text-neutral-600 dark:text-neutral-400">
+            <p class="mt-4 text-pretty text-base text-neutral-600">
                 {subTitle}
             </p>
         </div>
-    {
-        btnExists
-        ? (
-        <div class="md:w-auto mt-4 md:mt-0">
-            <PrimaryCTA title={btnTitle} url={btnURL} />
-        </div>
-        )
-        : null
-    }
+        {
+            btnExists
+                ? (
+                        <div class="sm:mt-0">
+                            <PrimaryCTA title={btnTitle} url={btnURL} />
+                        </div>
+                    )
+                : null
+        }
     </div>
 </section>

@@ -1,18 +1,18 @@
 import type { NavigationLink, Site } from './types.ts'
 
 export const SITE: Site = {
-    author: 'Godruoyi',
-    url: 'https://godruoyi.com',
-    title: '连波的闲谈杂鱼',
-    description: 'Godruoyi\'s personal blog, I enjoy the process of building something using any technology stack',
+    author: '',
+    url: '',
+    title: '',
+    description: '',
     shortDescription: '',
 }
 
 export const NavigationLinks: NavigationLink[] = [
     { name: 'Posts', url: '/posts/' },
     { name: 'Category', url: '/categories/' },
+    { name: 'Tags', url: '/tags/' },
     { name: 'Timeline', url: '/timeline/' },
-    { name: 'About', url: '/posts/about-godruoyi/' },
     { name: 'Friends', url: '/friends/' },
 ]
 
@@ -23,8 +23,8 @@ export const FooterLinks = [
             { name: 'Posts', url: '/posts/' },
             { name: 'Timeline', url: '/timeline/' },
             { name: 'Categories', url: '/categories/' },
-            { name: 'About Me', url: '/posts/about-godruoyi/' },
-            { name: 'Friends', url: '/friends' },
+            { name: 'Tags', url: '/tags/' },
+            { name: 'Friends', url: '/friends/' },
         ],
     },
     {
@@ -32,8 +32,6 @@ export const FooterLinks = [
         links: [
             { name: 'RSS', url: '/rss.xml' },
             { name: 'Site Map', url: '/sitemap-index.xml' },
-            { name: 'GitHub', url: 'https://github.com/godruoyi' },
-            { name: 'Wechat', url: 'https://images.godruoyi.com/wechat.jpg' },
         ],
     },
 ]
@@ -46,8 +44,8 @@ export const Settings = {
 
     // See https://github.com/umami-software/umami
     UmamiAnalytics: {
-        enable: true,
-        dataWebsiteID: 'bf63658a-9418-4f39-a6a1-5a0cedb6e429',
+        enable: false,
+        dataWebsiteID: '',
     },
 
     Comment: {
@@ -58,10 +56,10 @@ export const Settings = {
         // please visit https://giscus.app/ to learn how to configure it.
         // You can also check out this article: https://liruifengv.com/posts/add-comments-to-astro/.
         giscus: {
-            repo: 'godruoyi/gblog',
-            repoId: 'MDEwOlJlcG9zaXRvcnkxMjcyODI0NzA',
-            category: 'Announcements',
-            categoryId: 'DIC_kwDOB5YtJs4CfZnX',
+            repo: 'yourname/yourrepo',
+            repoId: '',
+            category: '',
+            categoryId: '',
             darkThem: 'noborder_gray',
             lightThem: 'light',
         },
