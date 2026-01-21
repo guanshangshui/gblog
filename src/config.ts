@@ -3,9 +3,9 @@ import type { NavigationLink, Site } from './types.ts'
 export const SITE: Site = {
     author: '',
     url: 'https://zerodotsix.top',
-    title: '',
+    title: '0.6的blog',
     description: '',
-    shortDescription: '',
+    shortDescription: '奇妙的地方',
 }
 
 export const NavigationLinks: NavigationLink[] = [
