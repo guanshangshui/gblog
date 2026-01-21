@@ -20,12 +20,11 @@ export async function getStaticPaths() {
     })
 
     return [...tags].map(tag => ({
-        params: { tag: encodeURIComponent(tag) },
+        params: { slug: encodeURIComponent(tag) },
         props: { tag },
     }))
 }
 
-const { tag } = Astro.props
 const URL = Astro.url.href
 const tagsURL = `${Astro.url.origin}/tags`
 
