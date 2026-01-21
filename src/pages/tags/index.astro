@@ -31,7 +31,7 @@ const tags = [...tagStats.entries()]
     .map(([tag, meta]) => ({
         tag,
         count: meta.count,
-        slug: encodeURIComponent(tag),
+        encodedTag: encodeURIComponent(tag),
     }))
 
 const description = '查看全部标签，按主题快速归档。'
@@ -61,10 +61,10 @@ const URL = Astro.url.href
 
     <section class="mx-auto max-w-5xl px-4 pb-12 sm:px-6 lg:px-8">
         <div class="flex flex-wrap gap-3">
-            {tags.map(({ tag, count, slug }) => (
+            {tags.map(({ tag, count, encodedTag }) => (
                 <a
                     class="group flex items-center gap-2 rounded-full border border-neutral-200 px-4 py-2 text-sm text-neutral-700 transition hover:border-neutral-500 hover:text-neutral-900"
-                    href={`/tags/${slug}/`}
+                    href={`/tags/${encodedTag}/`}
                     data-astro-prefetch
                 >
                     <span class="font-display">{tag}</span>
