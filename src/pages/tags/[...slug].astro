@@ -25,6 +25,8 @@ export async function getStaticPaths() {
     }))
 }
 
+const { tag } = Astro.props
+
 const URL = Astro.url.href
 const tagsURL = `${Astro.url.origin}/tags`
 
