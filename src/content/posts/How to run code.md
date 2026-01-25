@@ -20,7 +20,7 @@ banner: "@images/banner/d75f-hwfpcxn2958458.jpg"
 ### 第一步：选择合适的开发工具
 深度学习项目基本都是以 Python 项目的形式提供的，所以我们需要一个好用的 Python 开发环境。这里你有几个选择：
 **Python 官方的 IDLE 编辑器**：这是 Python 自带的编辑器，优点是安装 Python 后就有，对大型项目支持比较友好,缺点是功能比较简陋。
-**VS Code（强烈推荐）**：这是微软开发的代码编辑器，在编程界使用极其广泛。它的优势在于轻量、插件丰富、对 Python 支持完善，而且跨平台使用体验一致。无论你用 Windows、Mac 还是 Linux，VS Code 都能给你提供几乎相同的开发体验。
+**VS Code（强烈推荐）**：这是微软开发的代码编辑器，在编程界使用极其广泛。它的优势在于轻量、插件丰富、对 Python 支持完善，而且跨平台使用体验一致。无论你用 Windows、Mac 还是 Linux， VS Code 都能给你提供几乎相同的开发体验。
 如果你还没安装 VS Code，去官网下载安装就好，过程非常简单。安装完成后，记得在插件市场搜索并安装 Python 插件，这样 VS Code 就能识别和运行 Python 代码了。
 
 ### 第二步：理解项目结构
@@ -42,7 +42,7 @@ banner: "@images/banner/d75f-hwfpcxn2958458.jpg"
 
 1. 打开 VS Code，使用"文件 → 打开文件夹"功能，选择你下载的项目文件夹。
 
-2. 打开 VS Code 的终端（快捷键是 Ctrl+ `，就是键盘左上角ESC下面那个键），你会看到一个命令行界面。
+2. 打开 VS Code 的终端（快捷键是 Ctrl+ `，就是键盘左上角 ESC 下面那个键），你会看到一个命令行界面。
 
 3. 在终端里输入以下命令：
 
@@ -132,15 +132,15 @@ python train.py
 
 3. 选择你下载的深度学习项目文件夹，比如我们以一个名为"PEter"的项目为例。
 
-![gblog/src/content/posts/_附件_/4a18cce02ca3818e6f38edf98bdacb3c_MD5.jpeg]
+![gblog/src/content/posts/_附件_/4a18cce02ca3818e6f38edf98bdacb3c_MD5.jpeg](gblog/src/content/posts/_附件_/4a18cce02ca3818e6f38edf98bdacb3c_MD5.jpeg)
 4. 项目打开后，你会在左侧看到完整的文件树结构，右侧是代码编辑区域。
 
 **第二步：与 AI 对话**
 
 Vscode 的界面左侧通常有一个聊天面板（如果没看到，点击侧边栏的 Ai 图标展开）。在这个面板里，你可以直接用自然语言和 AI 交流。
-![gblog/src/content/posts/_附件_/79d987499bf78593820aea7eabc9ce81_MD5.jpeg]
+![gblog/src/content/posts/_附件_/79d987499bf78593820aea7eabc9ce81_MD5.jpeg](gblog/src/content/posts/_附件_/79d987499bf78593820aea7eabc9ce81_MD5.jpeg)
 你可以这样问：
-![gblog/src/content/posts/_附件_/d3330cd58f11d2622fb792989142c6fc_MD5.jpeg]
+![gblog/src/content/posts/_附件_/d3330cd58f11d2622fb792989142c6fc_MD5.jpeg](gblog/src/content/posts/_附件_/d3330cd58f11d2622fb792989142c6fc_MD5.jpeg)
 ```C++
 "帮我分析一下这个项目的结构，告诉我应该如何运行它。"
 ```
@@ -222,7 +222,7 @@ AI 会准确定位到配置文件或代码中的相关位置，并帮你完成�
 我知道很多同学会关心费用问题。这里给你们一些建议：
 注意 AI 插件是需要自己提供 AI 的 api 的, 目前市面上的可以免费试用的 AI api 有魔搭和心流, 英伟达的提供的开源模型, 但是这种配置比较麻烦, 所以还是推荐直接安装免费的国内的 IDE 就行了.
 **如果你完全不想花钱**：使用 Trae 或通义灵码。它们在国内免费，不需要科学上网，对于学习和复现论文来说完全够用。虽然 AI 的能力比不上 GPT-5.2 或 Claude opus 4.5，但处理环境配置、依赖安装、常见错误这些问题绰绰有余。
-**如果你愿意投资学习**：claudecode 或 codex, cursor是更好的选择。Cursor 每月 20 美元左右，claude code每月 20 美元，市面上存在各种方法可以以低成本使用, 所有对于个人来说还好
+**如果你愿意投资学习**：claudecode 或 codex, cursor是更好的选择。Cursor 每月 20 美元左右，claude code 每月 20 美元，市面上存在各种方法可以以低成本使用, 所有对于个人来说还好
 
 ## 我的建议
 我能给你们的建议是：
