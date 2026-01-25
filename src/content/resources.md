@@ -1,5 +1,5 @@
 ---
-date_modified: 2026-01-26 00:01:15
+date_modified: 2026-01-26 00:04:32
 ---
 
 <!--
@@ -9,6 +9,5 @@ date_modified: 2026-01-26 00:01:15
   - 描述
 -->
 
-- 宝玉的分享
-	- [宝玉的分享](https://baoyu.io/blog)
-	- AI 方面不错的翻译 blog
+AI 方面
+[宝玉的分享](https://baoyu.io/translations)
