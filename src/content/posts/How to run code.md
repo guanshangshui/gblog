@@ -132,15 +132,15 @@ python train.py
 
 3. 选择你下载的深度学习项目文件夹，比如我们以一个名为"PEter"的项目为例。
 
-![src/content/posts/_附件_/4a18cce02ca3818e6f38edf98bdacb3c_MD5.jpeg](gblog/src/content/posts/_附件_/4a18cce02ca3818e6f38edf98bdacb3c_MD5.jpeg)
+![](./_附件_/4a18cce02ca3818e6f38edf98bdacb3c_MD5.jpeg)
 4. 项目打开后，你会在左侧看到完整的文件树结构，右侧是代码编辑区域。
 
 **第二步：与 AI 对话**
 
 Vscode 的界面左侧通常有一个聊天面板（如果没看到，点击侧边栏的 Ai 图标展开）。在这个面板里，你可以直接用自然语言和 AI 交流。
-![src/content/posts/_附件_/79d987499bf78593820aea7eabc9ce81_MD5.jpeg](gblog/src/content/posts/_附件_/79d987499bf78593820aea7eabc9ce81_MD5.jpeg)
+![](./_附件_/79d987499bf78593820aea7eabc9ce81_MD5.jpeg)
 你可以这样问：
-![src/content/posts_附件_/d3330cd58f11d2622fb792989142c6fc_MD5.jpeg](gblog/src/content/posts/_附件_/d3330cd58f11d2622fb792989142c6fc_MD5.jpeg)
+![](./_附件_/d3330cd58f11d2622fb792989142c6fc_MD5.jpeg)
 ```C++
 "帮我分析一下这个项目的结构，告诉我应该如何运行它。"
 ```
