@@ -2,7 +2,7 @@
 title: "深度学习论文复现入门指南：从环境配置到 AI 辅助开发"
 description: "从手动配置到 AI 协助，带你顺利跑通深度学习论文代码复现流程。"
 pubDate: "2026-01-25 19:23:21"
-date_modified: 2026-01-25 19:32:15
+date_modified: 2026-01-25 19:53:01
 category: "教程"
 tags: ["深度学习", "环境配置", "AI编程", "论文复现", "Python"]
 banner: "@images/banner/d75f-hwfpcxn2958458.jpg"
@@ -132,15 +132,15 @@ python train.py
 
 3. 选择你下载的深度学习项目文件夹，比如我们以一个名为"PEter"的项目为例。
 
-![gblog/src/content/posts/_附件_/4a18cce02ca3818e6f38edf98bdacb3c_MD5.jpeg](gblog/src/content/posts/_附件_/4a18cce02ca3818e6f38edf98bdacb3c_MD5.jpeg)
+![src/content/posts/_附件_/4a18cce02ca3818e6f38edf98bdacb3c_MD5.jpeg](gblog/src/content/posts/_附件_/4a18cce02ca3818e6f38edf98bdacb3c_MD5.jpeg)
 4. 项目打开后，你会在左侧看到完整的文件树结构，右侧是代码编辑区域。
 
 **第二步：与 AI 对话**
 
 Vscode 的界面左侧通常有一个聊天面板（如果没看到，点击侧边栏的 Ai 图标展开）。在这个面板里，你可以直接用自然语言和 AI 交流。
-![gblog/src/content/posts/_附件_/79d987499bf78593820aea7eabc9ce81_MD5.jpeg](gblog/src/content/posts/_附件_/79d987499bf78593820aea7eabc9ce81_MD5.jpeg)
+![src/content/posts/_附件_/79d987499bf78593820aea7eabc9ce81_MD5.jpeg](gblog/src/content/posts/_附件_/79d987499bf78593820aea7eabc9ce81_MD5.jpeg)
 你可以这样问：
-![gblog/src/content/posts/_附件_/d3330cd58f11d2622fb792989142c6fc_MD5.jpeg](gblog/src/content/posts/_附件_/d3330cd58f11d2622fb792989142c6fc_MD5.jpeg)
+![src/content/posts/_附件_/d3330cd58f11d2622fb792989142c6fc_MD5.jpeg](gblog/src/content/posts/_附件_/d3330cd58f11d2622fb792989142c6fc_MD5.jpeg)
 ```C++
 "帮我分析一下这个项目的结构，告诉我应该如何运行它。"
 ```
