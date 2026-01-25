@@ -13,6 +13,7 @@ export const NavigationLinks: NavigationLink[] = [
     { name: '文章', url: '/posts/' },
     { name: '标签', url: '/tags/' },
     { name: '作品', url: '/friends/' },
+    { name: '宝藏资源', url: '/resources/' },
 ]
 
 export const FooterLinks = [
@@ -23,6 +24,7 @@ export const FooterLinks = [
             { name: '文章', url: '/posts/' },
             { name: '标签', url: '/tags/' },
             { name: '作品', url: '/friends/' },
+            { name: '宝藏资源', url: '/resources/' },
         ],
     },
     {

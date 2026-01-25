@@ -1,0 +1,18 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro'
+import MainSection from '@components/ui/sections/MainSection.astro'
+import ResourcesContent from '@content/resources.md'
+
+const title = '宝藏资源'
+const description = '记录我收藏的优质博客、视频与工具链接。'
+---
+
+<BaseLayout title={title} description={description}>
+    <MainSection title={title} subTitle={description} />
+
+    <section class="mx-auto max-w-5xl px-4 pb-12 sm:px-6 lg:px-8">
+        <article class="prose prose-blog sm:prose-lg max-w-none">
+            <ResourcesContent />
+        </article>
+    </section>
+</BaseLayout>
