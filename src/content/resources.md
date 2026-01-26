@@ -110,3 +110,8 @@ date_modified: 2026-01-26 10:51:47
 - 2026最新注册谷歌账号可用方式
 - [https://mailberry.com.cn/2026/01/2026-register-google-account/](https://mailberry.com.cn/2026/01/2026-register-google-account/)
 - 分享 2026 年注册谷歌账号的有效方法，包括通过 Gmail、Play 商店等移动端应用注册的实用技巧
+
+
+- 写在 PicGo 即将 8 周年之际
+- [https://molunerfinn.com/8-years-of-PicGo/](https://molunerfinn.com/8-years-of-PicGo/)
+- PicGo 作者 Molunerfinn 回顾 8 年开发历程，从大学宿舍的第一个 commit 到插件化架构的演进，分享开源项目如何影响职业发展和人生选择的真实故事
