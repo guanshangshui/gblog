@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(systeminfo)",
+      "Bash(findstr:*)",
+      "Bash(wmic cpu get name,numberOfCores,numberOfLogicalProcessors,maxclockspeed)",
+      "Bash(wmic memorychip get:*)",
+      "Bash(wmic diskdrive get:*)",
+      "Bash(wmic:*)"
+    ]
+  }
+}
