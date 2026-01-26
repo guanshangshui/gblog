@@ -95,6 +95,16 @@ date_modified: 2026-01-26 10:51:47
 
 ## 个人思考 / 博客
 
+- 从广深到北美——本科毕业这四年
+- [https://mp.weixin.qq.com/s/avHKLvLqO-8AKDd00peTOw](https://mp.weixin.qq.com/s/avHKLvLqO-8AKDd00peTOw)
+- 一位腾讯微信员工裸辞出国的真实经历，从成都实习到广州微信三年，再到考托福申请美国研究生，最终在硅谷找到工作的完整历程，探讨"我想过一个什么样的人生"这个问题
+
+
+- 写在 PicGo 即将 8 周年之际
+- [https://molunerfinn.com/8-years-of-PicGo/](https://molunerfinn.com/8-years-of-PicGo/)
+- PicGo 作者 Molunerfinn 回顾 8 年开发历程，从大学宿舍的第一个 commit 到插件化架构的演进，分享开源项目如何影响职业发展和人生选择的真实故事
+
+
 - 那些对着屏幕说真话的夜晚：关于体制内无声的孤独
 - [https://blog.xzbzq.com/31596.html](https://blog.xzbzq.com/31596.html)
 - 深度思考体制内人员与 AI 共情的现象，探讨真实表达的困境和人际关系的原子化
@@ -110,8 +120,3 @@ date_modified: 2026-01-26 10:51:47
 - 2026最新注册谷歌账号可用方式
 - [https://mailberry.com.cn/2026/01/2026-register-google-account/](https://mailberry.com.cn/2026/01/2026-register-google-account/)
 - 分享 2026 年注册谷歌账号的有效方法，包括通过 Gmail、Play 商店等移动端应用注册的实用技巧
-
-
-- 写在 PicGo 即将 8 周年之际
-- [https://molunerfinn.com/8-years-of-PicGo/](https://molunerfinn.com/8-years-of-PicGo/)
-- PicGo 作者 Molunerfinn 回顾 8 年开发历程，从大学宿舍的第一个 commit 到插件化架构的演进，分享开源项目如何影响职业发展和人生选择的真实故事
