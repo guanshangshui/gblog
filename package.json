@@ -24,7 +24,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "test:voice": "node tests/voice-url.test.mjs"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.2.4",

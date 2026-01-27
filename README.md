@@ -17,6 +17,15 @@ Gblog is a blog template designed for those who are unable or unwilling to write
 - 🪲 Markdown And MDX
 - 🏂🏾 Page Compression & Image Optimization
 
+## Voice Posts
+
+Add optional audio to a post header:
+
+1. Place audio files in `public/voice/` (example: `public/voice/my-post.wav`).
+2. Add `voiceUrl: "/voice/my-post.wav"` to the post frontmatter.
+3. (Optional) Add `voiceType: "audio/wav"` when you use non-MP3 formats.
+4. The post detail page will show Play and Download buttons next to the title.
+
 ## Make Your Own
 
 You can use this template directly to build your own blog in four different ways.
@@ -53,6 +62,7 @@ With dependencies installed, you can utilize the following npm scripts to manage
 - `pnpm run dev`: Starts a local development server with hot reloading enabled.
 - `pnpm run preview`: Serves your build output locally for preview before deployment.
 - `pnpm run build`: Bundles your site into static files for production.
+- `pnpm run test:voice`: Validates `voiceUrl` frontmatter format.
 
 For detailed help with Astro CLI commands, visit [Astro's documentation](https://docs.astro.build/en/reference/cli-reference/).
 
