@@ -14,7 +14,7 @@ interface Props {
     structuredData?: object
 }
 
-const { title, description = SITE.description, ogImage, lang = 'en', structuredData } = Astro.props
+const { title, description = SITE.description || SITE.shortDescription, ogImage, lang = 'zh-CN', structuredData } = Astro.props
 const normalizeTitle = !title ? SITE.title : `${title} | ${SITE.title}`
 ---
 

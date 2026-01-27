@@ -4,7 +4,7 @@ export const SITE: Site = {
     author: '',
     url: 'https://zerodotsix.top',
     title: '0.6的blog',
-    description: '',
+    description: '奇妙的地方',
     shortDescription: '奇妙的地方',
 }
 
@@ -95,7 +95,7 @@ export const SEO = {
     structuredData: {
         '@context': 'https://schema.org',
         '@type': 'WebPage',
-        'inLanguage': 'en-US',
+        'inLanguage': 'zh-CN',
         '@id': SITE.url,
         'url': SITE.url,
         'name': SITE.title,
