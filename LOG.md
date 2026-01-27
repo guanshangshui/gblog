@@ -7,3 +7,4 @@
 - Added `tests/voice-url.test.mjs` and `pnpm run test:voice`.
 - Documented voice usage in `README.md`.
 - Added optional `voiceType` for non-MP3 audio and relaxed validation rules.
+- Fixed `voiceUrl` path and added `voiceType` for the 提问的艺术 post.
