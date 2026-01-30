@@ -50,6 +50,11 @@ date_modified: 2026-01-26 10:51:47
 - 作者通过实际构建 Windows 图像转换工具和屏幕录制编辑器的经历，展示 Claude Opus 4.5 在代码生成和问题解决能力上的突破性进展
 
 
+- 从 Cursor 顶级用户到 Claude Code 2.0：一份全面指南
+- [https://blog.silennai.com/claude-code](https://blog.silennai.com/claude-code)
+- 一位 5 年 AI 编程经验的开发者分享从 Cursor 切换到 Claude Code 2.0 的完整指南，涵盖上下文管理、规划策略、调试技巧、并行终端工作流、自定义命令等高级用法
+
+
 - 拥抱并行编码代理的生活方式
 - [https://simonwillison.net/2025/Oct/5/parallel-coding-agents/](https://simonwillison.net/2025/Oct/5/parallel-coding-agents/)
 - Simon Willison 分享同时运行多个 AI 编码代理的实践经验，包括研究概念验证、小型维护任务等应用场景和工作流程
@@ -110,6 +115,11 @@ date_modified: 2026-01-26 10:51:47
 - 深度思考体制内人员与 AI 共情的现象，探讨真实表达的困境和人际关系的原子化
 
 
+- 一个让我们失去朋友的常见习惯
+- [https://clip.owenyoung.com/2026/01/yi-ge-rang-wo-men-shi-qu-peng-you-de-chang-jian-xi-guan/](https://clip.owenyoung.com/2026/01/yi-ge-rang-wo-men-shi-qu-peng-you-de-chang-jian-xi-guan/)
+- 作者通过两次失去朋友圈的亲身经历，反思了一个危险的社交习惯：从不主动联系朋友。文章探讨了社交关系中的主动性、依赖性和责任感，提醒我们在每段关系中都应承担至少 50% 的维系责任
+
+
 ## 工具 / 教程
 
 - 1key cdkey
@@ -120,10 +130,3 @@ date_modified: 2026-01-26 10:51:47
 - 2026最新注册谷歌账号可用方式
 - [https://mailberry.com.cn/2026/01/2026-register-google-account/](https://mailberry.com.cn/2026/01/2026-register-google-account/)
 - 分享 2026 年注册谷歌账号的有效方法，包括通过 Gmail、Play 商店等移动端应用注册的实用技巧
-
-
-
-
-https://clip.owenyoung.com/2026/01/yi-ge-rang-wo-men-shi-qu-peng-you-de-chang-jian-xi-guan/
-
-https://blog.silennai.com/claude-code#/
