@@ -1,8 +1,8 @@
 ---
 title: "如何解决 AI 智能体的上下文失效问题"
 description: "探讨业界在智能体开发中应对上下文失效的四大策略：写入、选择、压缩、隔离，以及它们在实际产品中的应用。"
-voiceUrl: "/voice/破解智能体上下文四大陷阱.m4a"
-voiceType: "audio/mp4"
+voiceUrl: "/voice/破解智能体上下文四大陷阱_min.mp3"
+voiceType: "audio/mp3"
 pubDate: "2026-01-30 18:50:00"
 category: "ai开发"
 tags: ["AI智能体", "上下文工程", "LLM", "提示词工程", "智能体架构"]
