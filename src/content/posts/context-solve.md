@@ -5,6 +5,7 @@ pubDate: "2026-01-30 18:50:00"
 category: "ai开发"
 tags: ["AI智能体", "上下文工程", "LLM", "提示词工程", "智能体架构"]
 banner: "@images/banner/v2-3bf4d7f8c05d19ad7f1cabf864031c2d_720w.jpg"
+date_modified: 2026-01-30 18:35:15
 ---
 
 作为上一篇文章的延续，我们现在可以聊聊业界在经过一年多的实践探索后，找到了哪些真正有效的方法来缓解上下文失效的问题。
@@ -21,7 +22,12 @@ banner: "@images/banner/v2-3bf4d7f8c05d19ad7f1cabf864031c2d_720w.jpg"
 
 那么在 2026 年的今天，我们该如何应对这一挑战呢？我把智能体上下文工程的常见缓解策略分为四个类别：写入、选择、压缩、隔离。接下来，我会通过一些流行的智能体产品和论文，给你展示每种策略的实际应用。
 
+[[gblog/src/content/posts/_附件_/0b5951652e8fd1f98a186253dfeeeda6_MD5.jpeg|Open: Pasted image 20260130181912.png]]
+![[gblog/src/content/posts/_附件_/0b5951652e8fd1f98a186253dfeeeda6_MD5.jpeg]]
+
 ## 写入上下文：在窗口之外构建记忆
+[[gblog/src/content/posts/_附件_/6b56af7050682c3c5c8c0caf237e6e90_MD5.jpeg|Open: Pasted image 20260130182106.png]]
+![[gblog/src/content/posts/_附件_/6b56af7050682c3c5c8c0caf237e6e90_MD5.jpeg]]
 
 写入上下文的核心思想是将信息保存在上下文窗口之外，让智能体可以随时调取。这听起来很抽象，但其实我们人类一直在这么做。想想你自己解决复杂问题的过程，你不会把所有信息都塞在脑子里反复思考，对吧？你会做笔记、画图表、列清单，把重要信息外化到纸上或电脑里。智能体的写入策略本质上就是在模仿这个过程。
 
@@ -37,6 +43,9 @@ banner: "@images/banner/v2-3bf4d7f8c05d19ad7f1cabf864031c2d_720w.jpg"
 
 比如 Claude Code 可以使用 think 工具。Anthropic 对该技术有一个非常详细的描述，详细介绍了他们的 think 工具。基本上就是一个草稿板，他们的原文描述如下：使用 think 工具，我们可以让 Claude 包含一个额外的思考步骤，一个完整独立的空间作为获取答案的一部分。这在执行工具调用或对用户进行多轮对话时特别有用。
 
+[[gblog/src/content/posts/_附件_/5964e43cfe94d5b6d22bbd2ce159a8b2_MD5.jpeg|Open: Pasted image 20260130182231.png]]
+![[gblog/src/content/posts/_附件_/5964e43cfe94d5b6d22bbd2ce159a8b2_MD5.jpeg]]
+
 有一个专门记录笔记或进度的空间是非常有效的。这样做可以产生非常显著的效果，在专业智能体的评测上能提升 54% 的表现。Anthropic 确定了三种外载上下文的有用场景：
 
 第一种是工具输出分析。当 Claude Code 需要在行动前仔细处理先前工具调用的输出，并需要回溯其方法时。
@@ -49,6 +58,9 @@ banner: "@images/banner/v2-3bf4d7f8c05d19ad7f1cabf864031c2d_720w.jpg"
 https://www.lapis.cafe/posts/technicaltutorials/chatgpt-memory-system-breakdown/
 
 ## 选择上下文：精准控制信息流
+
+[[gblog/src/content/posts/_附件_/a0cb879face987b088283d721a315f32_MD5.jpeg|Open: Pasted image 20260130182727.png]]
+![[gblog/src/content/posts/_附件_/a0cb879face987b088283d721a315f32_MD5.jpeg]]
 
 选择上下文意味着只选择指定的一部分上下文窗口来帮助智能体执行任务。选择机制取决于具体的实现方式。如果它是一个工具，那么智能体可以通过工具调用来简单地读取它。如果它是智能体运行时状态的一部分，那么开发者可以选择在每一步向智能体暴露状态的哪些部分。
 
@@ -66,13 +78,19 @@ https://www.lapis.cafe/posts/technicaltutorials/chatgpt-memory-system-breakdown/
 
 选择工具最简单的方法是将 RAG 应用到你的智能体工具描述中。有一篇论文 RAG-MCP 详细介绍了这一点。通过将工具描述存储在向量数据库中，他们能够根据输入提示词选择最相关的工具。
 
-这种方法的好处是使用大模型驱动的 RAG 来动态选择工具，可以有效降低上下文中工具定义的占比和消耗。更重要的是可以降低大模型的推理功耗和提升速度，而这些都是在边缘端部署时的关键指标。即使动态工具选择并不能显著改善模型最后的推理结果，但功耗的节省和速度的提升同样是值得考虑的，它们都有极为显著的效果。
+[[gblog/src/content/posts/_附件_/43d7821481ba69b51befd425ddfec4d7_MD5.jpeg|Open: Pasted image 20260130182912.png]]
+![[gblog/src/content/posts/_附件_/43d7821481ba69b51befd425ddfec4d7_MD5.jpeg]]
 
-幸运的是，大部分智能体的任务处理并不会特别复杂，往往只需要几个手工策划的工具。但如果任务所需功能的广度或深度远远超过了集成工具的数量，需要扩展时，那你就明显需要考虑工具配置的问题了。
+这种方法的好处是使用大模型驱动的 RAG 来动态选择工具，可以有效降低上下文中工具定义的占比和消耗。更重要的是可以降低大模型的推理功耗和提升速度，而这些都是在边缘端部署时的关键指标。这里有个有趣的发现，即使动态工具选择并不能显著改善模型最后的推理结果，但功耗的节省和速度的提升本身就是巨大的价值。想象一下，如果你的智能体运行在移动设备或嵌入式系统上，每节省一点功耗都意味着更长的续航时间，每提升一点速度都意味着更好的用户体验。
 
-我们在上面详细提到了两点：上下文的裁剪和工具的配置选择。实际上它们都出于一个想法，通过特定的选择来尽量减少上下文的使用。
+幸运的是，大部分智能体的任务处理并不会特别复杂，往往只需要几个手工策划的工具就能搞定。但如果你的任务所需功能的广度或深度远远超过了集成工具的数量，需要扩展到几十个甚至上百个工具时，那你就明显需要认真考虑工具配置的问题了。
+
+我们在上面详细提到了两点，上下文的裁剪和工具的配置选择。实际上它们都出于同一个想法，通过精准的选择来尽量减少上下文的使用，让智能体只看到它真正需要的信息。
 
 ## 压缩上下文：形成高质量摘要
+
+[[gblog/src/content/posts/_附件_/6b17ccb18229e0d96d5f9c421503713d_MD5.jpeg|Open: Pasted image 20260130183056.png]]
+![[gblog/src/content/posts/_附件_/6b17ccb18229e0d96d5f9c421503713d_MD5.jpeg]]
 
 智能体在交互时可以跨越数百轮对话，并使用密集的 token 进行工具调用。摘要是解决上下文管理的一种常见方法。
 
@@ -84,10 +102,16 @@ https://www.lapis.cafe/posts/technicaltutorials/chatgpt-memory-system-breakdown/
 
 这个功能很有用，比如它可以用于某些后处理工具调用，像搜索工具、读取文件这些 token 密集型的工具。如何有效实现这个目的同样值得考虑。有人会选择使用递归式摘要，有人会选择分层式摘要，甚至有些智能体构建厂商会专门微调一个轻量级的总结模型来处理这个任务。
 
+[[gblog/src/content/posts/_附件_/f95d4bf41c4be091792eae0c414f48d1_MD5.jpeg|Open: Pasted image 20260130183154.png]]
+![[gblog/src/content/posts/_附件_/f95d4bf41c4be091792eae0c414f48d1_MD5.jpeg]]
+
 压缩上下文的艺术在于选择保留什么和丢弃什么。过度激进的压缩可能会导致丢失微妙但非常关键的上下文，这些上下文的重要性可能会在某个步骤中突然显现出来。
 
 最容易处理的方法是清理掉过去工具调用的中间过程。一旦工具在消息历史中被调用过，智能体为什么还需要看到调用过程中产生的所有数据呢？我们只需要保存最后的结果就好了。最安全、最轻量级的压缩方式就是选择清除工具调用的中间结果。
 ## 隔离上下文：分而治之的智慧
+
+[[gblog/src/content/posts/_附件_/3e4ad1a504346cb27333f561a95bd84d_MD5.jpeg|Open: Pasted image 20260130183304.png]]
+![[gblog/src/content/posts/_附件_/3e4ad1a504346cb27333f561a95bd84d_MD5.jpeg]]
 
 上下文隔离是指让每个智能体在各自专用的线程中隔离彼此的上下文，每个线程有单独的大模型实例来使用。当上下文不太长，且不包含不相关内容时，没有了上下文分散的问题，我们通常都可以看到模型会提供出更好的结果。
 
@@ -102,6 +126,8 @@ https://www.lapis.cafe/posts/technicaltutorials/chatgpt-memory-system-breakdown/
 ### 使用环境进行上下文隔离
 
 这是隔离上下文的另一个方向。比如 Hugging Face 的研究员展示了上下文隔离的另一个有趣例子。大多数智能体使用工具调用的 API，它返回可以传递给工具的搜索结果或工具反馈的 JSON 对象。Hugging Face 通过使用 Code Agent，它会输出所需工具调用的代码，然后代码在沙箱中运行，可以指定工具调用的上下文，然后传递回给大模型。
+
+![[Pasted image 20260130183511.png]]
 
 这样的话，沙箱就可以把一部分上下文从大模型中隔离开来。Hugging Face 注意到，这是隔离 token 密集对象的一种绝佳方式。如果我们允许的话，甚至可以不只是单纯搜索文件，还可以通过图像、音频、视频这种方式来获取内容。
 
@@ -118,7 +144,6 @@ https://www.lapis.cafe/posts/technicaltutorials/chatgpt-memory-system-breakdown/
 隔离上下文，将上下文分割到不同的会话中，帮助智能体更好地专注于每个小任务。
 
 这四种策略不是孤立的，它们可以组合使用，相互补充。理解它们背后的原理，能帮助你在构建智能体时做出更明智的选择，避免那些常见的上下文陷阱。
-
 
 引用:
 https://openai.com/index/unrolling-the-codex-agent-loop/
