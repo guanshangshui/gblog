@@ -7,7 +7,7 @@ import partytown from '@astrojs/partytown'
 import rehypePrettyCode from 'rehype-pretty-code'
 import { transformerCopyButton } from '@rehype-pretty/transformers'
 import { SITE } from './src/config.ts'
-import { remarkReadingTime } from './src/support/plugins.ts'
+import { remarkObsidianImages, remarkReadingTime } from './src/support/plugins.ts'
 import { uploadAssetsToS3 } from './src/support/uploader.ts'
 
 export default defineConfig({
@@ -59,7 +59,7 @@ export default defineConfig({
                 ],
             }],
         ],
-        remarkPlugins: [remarkReadingTime],
+        remarkPlugins: [remarkObsidianImages, remarkReadingTime],
     },
     devToolbar: {
         enabled: false,

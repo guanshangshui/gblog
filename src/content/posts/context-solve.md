@@ -5,7 +5,7 @@ pubDate: "2026-01-30 18:50:00"
 category: "ai开发"
 tags: ["AI智能体", "上下文工程", "LLM", "提示词工程", "智能体架构"]
 banner: "@images/banner/v2-3bf4d7f8c05d19ad7f1cabf864031c2d_720w.jpg"
-date_modified: 2026-01-30 18:43:12
+date_modified: 2026-01-30 19:03:26
 ---
 
 作为上一篇文章的延续，我们现在可以聊聊业界在经过一年多的实践探索后，找到了哪些真正有效的方法来缓解上下文失效的问题。
@@ -119,8 +119,6 @@ https://www.lapis.cafe/posts/technicaltutorials/chatgpt-memory-system-breakdown/
 ### 使用环境进行上下文隔离
 
 这是隔离上下文的另一个方向。比如 Hugging Face 的研究员展示了上下文隔离的另一个有趣例子。大多数智能体使用工具调用的 API，它返回可以传递给工具的搜索结果或工具反馈的 JSON 对象。Hugging Face 通过使用 Code Agent，它会输出所需工具调用的代码，然后代码在沙箱中运行，可以指定工具调用的上下文，然后传递回给大模型。
-
-![Pasted image 20260130183511](./_附件_/Pasted image 20260130183511.png)
 
 这样的话，沙箱就可以把一部分上下文从大模型中隔离开来。Hugging Face 注意到，这是隔离 token 密集对象的一种绝佳方式。如果我们允许的话，甚至可以不只是单纯搜索文件，还可以通过图像、音频、视频这种方式来获取内容。
 
