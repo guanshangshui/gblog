@@ -10,6 +10,11 @@ date_modified: 2026-01-26 10:51:47
 
 ## AI 相关
 
+- One Useful Thing
+- [https://www.oneusefulthing.org/](https://www.oneusefulthing.org/)
+- 沃顿商学院教授 Ethan Mollick 的博客，探讨 AI 对工作、教育和生活的影响，提供前沿的 AI 应用洞察
+
+
 - 宝玉的分享
 - [https://baoyu.io/translations](https://baoyu.io/translations)
 - AI 相关技术文章的中文翻译，涵盖 AI 智能体、编程工具、软件工程等前沿话题
@@ -18,6 +23,36 @@ date_modified: 2026-01-26 10:51:47
 - 谈谈 AI 编程工具的进化与 Vibe Coding
 - [https://guangzhengli.com/blog/zh/vibe-coding-and-context-coding](https://guangzhengli.com/blog/zh/vibe-coding-and-context-coding)
 - 探讨 AI 辅助编程的演进，从 GitHub Copilot 到 Cursor 再到 Claude Code，深入分析上下文工程的重要性
+
+
+- 解决错误的问题：AI 辅助编程的思考
+- [https://www.ufried.com/blog/ai_assisted_coding/](https://www.ufried.com/blog/ai_assisted_coding/)
+- 深入思考 AI 辅助编程和 AI 驱动编程（vibe coding）的本质，探讨 LLM 基于概率生成代码的局限性，以及我们是否在解决正确的问题
+
+
+- AI 与自动化的讽刺（上）
+- [https://www.ufried.com/blog/ironies_of_ai_1/](https://www.ufried.com/blog/ironies_of_ai_1/)
+- 重访 1983 年 Lisanne Bainbridge 的经典论文，探讨自动化的反直觉效应在当今 AI Agent 时代的适用性，分析人机协作中的技能退化和监控疲劳问题
+
+
+- AI 与自动化的讽刺（下）
+- [https://www.ufried.com/blog/ironies_of_ai_2/](https://www.ufried.com/blog/ironies_of_ai_2/)
+- 继续探讨自动化的讽刺效应，分析 AI Agent 的用户界面设计问题，以及如何在 AI 辅助的白领工作自动化中避免重蹈工业自动化的覆辙
+
+
+- 动态上下文发现
+- [https://cursor.com/cn/blog/dynamic-context-discovery](https://cursor.com/cn/blog/dynamic-context-discovery)
+- Cursor 团队分享如何通过动态上下文发现提升 Agent 效率，包括将工具响应转为文件、引用对话历史、支持 Agent Skills 标准、优化 MCP 工具加载等实践
+
+
+- 深入解析 Codex 智能体循环
+- [https://openai.com/zh-Hans-CN/index/unrolling-the-codex-agent-loop/](https://openai.com/zh-Hans-CN/index/unrolling-the-codex-agent-loop/)
+- OpenAI 详解 Codex CLI 的核心运作机制，包括智能体循环、提示构建、工具调用、上下文窗口管理等关键技术细节
+
+
+- Agent 如何使用文件系统进行上下文工程
+- [https://www.blog.langchain.com/how-agents-can-use-filesystems-for-context-engineering/](https://www.blog.langchain.com/how-agents-can-use-filesystems-for-context-engineering/)
+- LangChain 团队探讨文件系统作为 Agent 上下文管理的统一接口，分析如何通过文件系统解决 token 过多、大量上下文需求、信息检索和持续学习等挑战
 
 
 - AI代理的上下文工程：构建Manus的经验教训
@@ -120,6 +155,11 @@ date_modified: 2026-01-26 10:51:47
 - 作者通过两次失去朋友圈的亲身经历，反思了一个危险的社交习惯：从不主动联系朋友。文章探讨了社交关系中的主动性、依赖性和责任感，提醒我们在每段关系中都应承担至少 50% 的维系责任
 
 
+- 无知是大多数人最终失败的原因
+- [https://www.floordaily.net/floorfocus/cluelessness-is-the-reason-most-people-eventually-](https://www.floordaily.net/floorfocus/cluelessness-is-the-reason-most-people-eventually-)
+- 探讨失败背后的根本原因——对自身角色的认知盲区。文章分析了三种自我挫败行为（责备、羞愧、辩解）如何导致无助感，强调通过批判性思维、接受反馈和定期自我反思来提升自我认知，从而掌控人生
+
+
 ## 工具 / 教程
 
 - 1key cdkey
@@ -130,3 +170,9 @@ date_modified: 2026-01-26 10:51:47
 - 2026最新注册谷歌账号可用方式
 - [https://mailberry.com.cn/2026/01/2026-register-google-account/](https://mailberry.com.cn/2026/01/2026-register-google-account/)
 - 分享 2026 年注册谷歌账号的有效方法，包括通过 Gmail、Play 商店等移动端应用注册的实用技巧
+
+
+https://yage.ai/
+
+
+https://simonwillison.net/
