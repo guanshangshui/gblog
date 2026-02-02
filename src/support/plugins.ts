@@ -81,8 +81,24 @@ function resolveObsidianImageTarget(target: string) {
     }
 
     let url = filename.replace(/\\/g, '/')
-    if (!/^(https?:)?\/\//.test(url) && !url.includes('_附件_/')) {
-        url = `./_附件_/${url}`
+    if (/^data:/.test(url)) {
+        return { url, alt, size }
+    }
+
+    const isExternal = /^(https?:)?\/\//.test(url)
+    if (!isExternal) {
+        // Already explicit relative or absolute URLs should be respected.
+        const isExplicitPath = /^(\.?\.\/|\/)/.test(url)
+        const basename = path.posix.basename(url)
+        const looksLikeVaultPath = url.includes('src/content/posts') || url.includes('content/posts') || url.includes('gblog/')
+        const looksLikeAttachmentDir = url.includes('_附件_/') || url.includes('/附件/')
+
+        if (!isExplicitPath && (looksLikeVaultPath || looksLikeAttachmentDir)) {
+            url = `./_附件_/${basename}`
+        } else if (!isExplicitPath && !url.includes('/')) {
+            // Default Obsidian behavior: attachments live under the per-post _附件_ folder.
+            url = `./_附件_/${url}`
+        }
     }
 
     return { url, alt, size }
@@ -90,67 +106,124 @@ function resolveObsidianImageTarget(target: string) {
 
 export function remarkObsidianImages() {
     return function (tree) {
-        visit(tree, 'text', (node, index, parent) => {
-            if (!parent || typeof index !== 'number') {
+        const appendText = (nodes: any[], value: string) => {
+            if (!value) {
                 return
             }
 
-            const text = node.value
-            const matches = [...text.matchAll(/!\[\[([^\]]+)\]\]/g)]
-            if (matches.length === 0) {
+            const last = nodes[nodes.length - 1]
+            if (last?.type === 'text') {
+                last.value += value
                 return
             }
 
-            const nodes = []
-            let lastIndex = 0
+            nodes.push({ type: 'text', value })
+        }
 
-            for (const match of matches) {
-                const start = match.index ?? 0
-                const end = start + match[0].length
+        const appendImage = (nodes: any[], target: string) => {
+            const image = resolveObsidianImageTarget(target.trim())
+            if (!image) {
+                appendText(nodes, `![[${target}]]`)
+                return
+            }
 
-                if (start > lastIndex) {
-                    nodes.push({ type: 'text', value: text.slice(lastIndex, start) })
+            if (image.size) {
+                const attrs = [
+                    `src="${escapeAttr(image.url)}"`,
+                    `alt="${escapeAttr(image.alt || '')}"`,
+                ]
+                if (image.size.width) {
+                    attrs.push(`width="${image.size.width}"`)
+                }
+                if (image.size.height) {
+                    attrs.push(`height="${image.size.height}"`)
                 }
 
-                const target = match[1].trim()
-                const image = resolveObsidianImageTarget(target)
+                nodes.push({ type: 'html', value: `<img ${attrs.join(' ')} />` })
+                return
+            }
 
-                if (!image) {
-                    nodes.push({ type: 'text', value: match[0] })
-                    lastIndex = end
+            nodes.push({
+                type: 'image',
+                url: image.url,
+                alt: image.alt || '',
+            })
+        }
+
+        const transformInline = (children: any[]) => {
+            const nodes: any[] = []
+            let collecting = false
+            let collected = ''
+
+            const processOutsideText = (value: string) => {
+                let text = value
+                while (text.length > 0) {
+                    const start = text.indexOf('![[')
+                    if (start === -1) {
+                        appendText(nodes, text)
+                        return
+                    }
+
+                    appendText(nodes, text.slice(0, start))
+                    text = text.slice(start + 3)
+
+                    const end = text.indexOf(']]')
+                    if (end !== -1) {
+                        appendImage(nodes, text.slice(0, end))
+                        text = text.slice(end + 2)
+                        continue
+                    }
+
+                    collecting = true
+                    collected = text
+                    return
+                }
+            }
+
+            const processInsideText = (value: string) => {
+                const end = value.indexOf(']]')
+                if (end === -1) {
+                    collected += value
+                    return
+                }
+
+                collected += value.slice(0, end)
+                appendImage(nodes, collected)
+                collecting = false
+                collected = ''
+                processOutsideText(value.slice(end + 2))
+            }
+
+            for (const child of children) {
+                if (!collecting) {
+                    if (child.type === 'text') {
+                        processOutsideText(child.value)
+                    } else {
+                        nodes.push(child)
+                    }
                     continue
                 }
 
-                if (image.size) {
-                    const attrs = [
-                        `src="${escapeAttr(image.url)}"`,
-                        `alt="${escapeAttr(image.alt || '')}"`,
-                    ]
-                    if (image.size.width) {
-                        attrs.push(`width="${image.size.width}"`)
-                    }
-                    if (image.size.height) {
-                        attrs.push(`height="${image.size.height}"`)
-                    }
-
-                    nodes.push({ type: 'html', value: `<img ${attrs.join(' ')} />` })
-                } else {
-                    nodes.push({
-                        type: 'image',
-                        url: image.url,
-                        alt: image.alt || '',
-                    })
+                if (child.type === 'text') {
+                    processInsideText(child.value)
+                    continue
                 }
 
-                lastIndex = end
+                collected += toString(child)
             }
 
-            if (lastIndex < text.length) {
-                nodes.push({ type: 'text', value: text.slice(lastIndex) })
+            if (collecting) {
+                appendText(nodes, `![[${collected}`)
             }
 
-            parent.children.splice(index, 1, ...nodes)
-            return [visit.SKIP, index + nodes.length]
+            return nodes
+        }
+
+        visit(tree, ['paragraph', 'heading'], (node: any) => {
+            if (!Array.isArray(node.children) || node.children.length === 0) {
+                return
+            }
+            node.children = transformInline(node.children)
         })
     }
 }
