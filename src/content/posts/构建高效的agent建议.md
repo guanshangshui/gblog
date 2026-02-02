@@ -5,7 +5,7 @@ voiceUrl: "/voice/如何设计AI上下文_min.mp3"
 pubDate: "2026-02-02 20:05:30"
 category: "ai开发"
 tags: ["Agent", "上下文工程", "提示词", "AI开发", "架构设计"]
-banner: "@images/banner/v2-3bf4d7f8c05d19ad7f1cabf864031c2d_720wjpg"
+banner: "@images/banner/v2-3bf4d7f8c05d19ad7f1cabf864031c2d_720w.jpg"
 ---
 
 ## 一、引言：当提示词工程走到尽头
