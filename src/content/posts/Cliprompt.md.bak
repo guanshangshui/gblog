@@ -30,12 +30,12 @@ date_modified: 2026-01-21 19:32:36
 
 下面是项目的实际截图。
 
-![Pasted image 20260121193010](https://img.zerodotsix.top/picture-ob/blog/2026/72b68e3da7a60df9ebe13f34690fad6995d7cccff24ad7b60fd72c075a134773.jpeg)
+![Pasted image 20260121193010](http://103.149.93.136:19000/picture-ob/blog/2026/72b68e3da7a60df9ebe13f34690fad6995d7cccff24ad7b60fd72c075a134773.jpeg)
 
-![Pasted image 20260121193018](https://img.zerodotsix.top/picture-ob/blog/2026/3646c3ba3694b50890f8494dd820233c41d1f3b3603190db62a9a614aa636021.jpeg)
+![Pasted image 20260121193018](http://103.149.93.136:19000/picture-ob/blog/2026/3646c3ba3694b50890f8494dd820233c41d1f3b3603190db62a9a614aa636021.jpeg)
 
 项目支持直接通过搜索框来添加新提示词，这样就省得打开编辑器专门创建文本了。底层我们直接使用了 VS Code 来作为编辑器，所以如果没有 VS Code 的朋友，可能需要通过其他方式来解决一下编辑器的问题。
 
-![Pasted image 202601211930??](https://img.zerodotsix.top/picture-ob/blog/2026/a0bc36d7b586140bbfb3ca650355c4944eb602438f4cab442f16b3c1cf2ee819.jpeg)
+![Pasted image 202601211930??](http://103.149.93.136:19000/picture-ob/blog/2026/a0bc36d7b586140bbfb3ca650355c4944eb602438f4cab442f16b3c1cf2ee819.jpeg)
 
-![Pasted image 20260121193040](https://img.zerodotsix.top/picture-ob/blog/2026/d4be3c28199aa028272801fab30be1382a9fa7b2169fe8654926927f1dc3d730.jpeg)
+![Pasted image 20260121193040](http://103.149.93.136:19000/picture-ob/blog/2026/d4be3c28199aa028272801fab30be1382a9fa7b2169fe8654926927f1dc3d730.jpeg)
