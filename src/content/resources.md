@@ -176,3 +176,5 @@ https://yage.ai/
 
 
 https://simonwillison.net/
+
+https://roadmap.sh/software-architect
