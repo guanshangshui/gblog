@@ -3,7 +3,7 @@ title: "outlookmailplus：会提取验证码的邮箱管理器？解放双手，
 description: "全面优化 UI 与使用体验的 Outlook 邮箱管理工具。支持自动提取验证码、一键复制邮箱及内置临时邮箱系统，极大简化账号注册流程。"
 pubDate: "2026-03-02 18:22:16"
 category: "项目"
-tags: ["Outlook", "邮箱管理", "验证码提取", "临时邮箱", "开源项目","项目]
+tags: ["Outlook", "邮箱管理", "验证码提取", "临时邮箱", "开源项目", "作品"]
 banner: "@images/banner/f3d919be9ededd19bee014dc9cb9f724.jpg"
 ---
 
