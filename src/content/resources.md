@@ -115,7 +115,7 @@ date_modified: 2026-01-26 10:51:47
 ## 软件工程 / 技术
 
 - 简介 | 软件设计的哲学，第二版
-- [https://yingang.github.io/aposd2e-zh/#%E7%9B%AE%E5%BD%95](https://yingang.github.io/aposd2e-zh/#%E7%9B%AE%E5%BD%95)
+- [https://yingang.github.io/aposd2e-zh/](https://yingang.github.io/aposd2e-zh/)
 - 《A Philosophy of Software Design》中文翻译，讲解如何管理软件复杂性，提供实用的设计原则和危险信号识别
 
 
@@ -129,7 +129,7 @@ date_modified: 2026-01-26 10:51:47
 ## 软技能 / 交流
 
 - 软件工程师的软技能指北（三）：高效交流篇
-- [https://ramsayleung.github.io/zh/post/2023/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%B8%88%E7%9A%84%E8%BD%AF%E6%8A%80%E8%83%BD%E6%8C%87%E5%8C%97_%E9%AB%98%E6%95%88%E4%BA%A4%E6%B5%81%E7%AF%873/)
+- [https://ramsayleung.github.io/zh/post/2023/软件工程师的软技能指北_高效交流篇3/](https://ramsayleung.github.io/zh/post/2023/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%B8%88%E7%9A%84%E8%BD%AF%E6%8A%80%E8%83%BD%E6%8C%87%E5%8C%97_%E9%AB%98%E6%95%88%E4%BA%A4%E6%B5%81%E7%AF%873/)
 - 软件工程师软技能系列文章，专注于职场中的高效沟通技巧和交流方法
 
 
@@ -156,7 +156,7 @@ date_modified: 2026-01-26 10:51:47
 
 
 - 无知是大多数人最终失败的原因
-- [https://www.floordaily.net/floorfocus/cluelessness-is-the-reason-most-people-eventually-](https://www.floordaily.net/floorfocus/cluelessness-is-the-reason-most-people-eventually-)
+- [https://www.floordaily.net/floorfocus/cluelessness-is-the-reason-most-people-eventually-fail](https://www.floordaily.net/floorfocus/cluelessness-is-the-reason-most-people-eventually-fail)
 - 探讨失败背后的根本原因——对自身角色的认知盲区。文章分析了三种自我挫败行为（责备、羞愧、辩解）如何导致无助感，强调通过批判性思维、接受反馈和定期自我反思来提升自我认知，从而掌控人生
 
 
@@ -172,9 +172,80 @@ date_modified: 2026-01-26 10:51:47
 - 分享 2026 年注册谷歌账号的有效方法，包括通过 Gmail、Play 商店等移动端应用注册的实用技巧
 
 
-https://yage.ai/
+## 优质博客 / 站点
+
+- yage.ai
+- [https://yage.ai/](https://yage.ai/)
+- 中文 AI 技术博客，探讨 AI 时代软件开发范式转变
 
 
-https://simonwillison.net/
+- Simon Willison
+- [https://simonwillison.net/](https://simonwillison.net/)
+- 知名开发者的技术博客，分享 AI 工具和开发实践
 
-https://roadmap.sh/software-architect
+
+- Software Architect Roadmap
+- [https://roadmap.sh/software-architect](https://roadmap.sh/software-architect)
+- 软件架构师学习路线图
+
+
+## 官方技术博客
+
+- Anthropic - Effective context engineering for AI agents
+- [https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)
+- AI 代理的有效上下文工程
+
+
+- Anthropic - Writing effective tools for AI agents
+- [https://www.anthropic.com/engineering/writing-tools-for-agents](https://www.anthropic.com/engineering/writing-tools-for-agents)
+- 如何为 AI 代理编写有效的工具
+
+
+- Anthropic - Effective harnesses for long-running agents
+- [https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents](https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents)
+- 长运行代理的有效约束机制
+
+
+- Anthropic - Measuring AI agent autonomy in practice
+- [https://www.anthropic.com/news/measuring-agent-autonomy](https://www.anthropic.com/news/measuring-agent-autonomy)
+- 实践中测量 AI 代理自主性
+
+
+- Anthropic - Best Practices for Claude Code
+- [https://code.claude.com/docs/en/best-practices](https://code.claude.com/docs/en/best-practices)
+- Claude Code 最佳实践官方文档
+
+
+- Anthropic - Equipping agents for the real world with Agent Skills
+- [https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills](https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills)
+- 使用 Agent Skills 让代理具备真实世界能力
+
+
+- Anthropic - Building Effective AI Agents
+- [https://www.anthropic.com/research/building-effective-agents](https://www.anthropic.com/research/building-effective-agents)
+- 构建高效 AI 代理的研究文章
+
+
+- Anthropic - 2026 Agentic Coding Trends Report
+- [https://resources.anthropic.com/hubfs/2026%20Agentic%20Coding%20Trends%20Report.pdf](https://resources.anthropic.com/hubfs/2026%20Agentic%20Coding%20Trends%20Report.pdf)
+- 2026 年代理式编码趋势报告
+
+
+- Anthropic - Harness design for long-running application development
+- [https://www.anthropic.com/engineering/harness-design-long-running-apps](https://www.anthropic.com/engineering/harness-design-long-running-apps)
+- 长运行应用开发的约束设计
+
+
+- Cursor - Best practices for coding with agents
+- [https://cursor.com/blog/agent-best-practices](https://cursor.com/blog/agent-best-practices)
+- 使用 Agent 进行编程的最佳实践
+
+
+- LangChain - State of Agent Engineering
+- [https://www.langchain.com/state-of-agent-engineering](https://www.langchain.com/state-of-agent-engineering)
+- 代理工程现状报告
+
+
+- LangChain - Agentic Engineering
+- [https://www.langchain.com/blog/agentic-engineering-redefining-software-engineering](https://www.langchain.com/blog/agentic-engineering-redefining-software-engineering)
+- 代理工程如何重新定义软件工程
