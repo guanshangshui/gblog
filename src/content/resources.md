@@ -100,6 +100,41 @@ date_modified: 2026-01-26 10:51:47
 - Dan Wang 的年度思考信，从硅谷与中国共产党的相似性谈起，探讨科技文化、AI 发展和社会变革
 
 
+- 133. 对谢赛宁的7小时马拉松访谈 - 张小珺Jùn｜商业访谈录 | 小宇宙
+- [https://www.xiaoyuzhoufm.com/episode/69b77577f8b8079bfa8eb837](https://www.xiaoyuzhoufm.com/episode/69b77577f8b8079bfa8eb837)
+- 播客节目访谈：关于世界模型、逃出硅谷、AMI Labs、两次拒绝 Ilya、杨立昆、李飞飞等话题的深度访谈。
+
+
+- Notes from inside China's AI labs - by Nathan Lambert
+- [https://www.interconnects.ai/p/notes-from-inside-chinas-ai-labs](https://www.interconnects.ai/p/notes-from-inside-chinas-ai-labs)
+- Nathan Lambert 分享的关于中国顶尖 AI 实验室的交流心得与见闻。
+
+
+- The Production-Ready RAG & AI Agents Roadmap
+- [https://mayursurani.medium.com/the-production-ready-rag-ai-agents-roadmap-what-actually-breaks-in-real-world-deployments-cb0e92ee1a82](https://mayursurani.medium.com/the-production-ready-rag-ai-agents-roadmap-what-actually-breaks-in-real-world-deployments-cb0e92ee1a82)
+- 探讨在真实世界部署 RAG 系统和 AI Agent 时遇到的实际问题和生产环境就绪路线图。
+
+
+- ginobefun 的 X (Twitter) 动态
+- [https://x.com/hongming731/status/2053314677237846060](https://x.com/hongming731/status/2053314677237846060)
+- 推荐阿里关于 AI Native 时代组织研发思考的文章，探讨突破人类局限的组织形态演进。
+
+
+- Ahmad Awais 的 X (Twitter) 动态
+- [https://x.com/MrAhmadAwais/status/2050956678502420612](https://x.com/MrAhmadAwais/status/2050956678502420612)
+- 关于开源模型工具调用能力的思考，探讨这更多是约束机制（harness）问题而非模型本身能力问题。
+
+
+- How to Work and Compound with AI
+- [https://eugeneyan.com/writing/working-with-ai/](https://eugeneyan.com/writing/working-with-ai/)
+- Eugene Yan 探讨如何与 AI 协作并产生复利：将上下文视为基础设施，品味作为配置，验证实现自主，并通过委托实现扩展。
+
+
+- Let the AI cook | ivan.codes
+- [https://www.ivan.codes/blog/let-it-cook](https://www.ivan.codes/blog/let-it-cook)
+- 探讨 AI 编程在合适的技术栈和开发者经验支持下的有效性，指出过分复杂的流程反而会阻碍工作效率。
+
+
 ## 独立开发 / 出海
 
 - 我的第一个出海产品，是怎样冷启动赚到第一个 100 美元的？
@@ -112,11 +147,26 @@ date_modified: 2026-01-26 10:51:47
 - 面向成本敏感的独立开发者，分享 Next.js 全栈技术栈选型和云平台、自托管等低成本部署方案
 
 
+- The One-Person Stack | ivan.codes
+- [https://www.ivan.codes/blog/the-one-person-stack](https://www.ivan.codes/blog/the-one-person-stack)
+- 探讨独立开发者如何独自开发真实产品，以及在不同阶段需要关注的技术栈和重点。
+
+
 ## 软件工程 / 技术
 
 - 简介 | 软件设计的哲学，第二版
 - [https://yingang.github.io/aposd2e-zh/](https://yingang.github.io/aposd2e-zh/)
 - 《A Philosophy of Software Design》中文翻译，讲解如何管理软件复杂性，提供实用的设计原则和危险信号识别
+
+
+- 软件设计的哲学 · 可视化讲解
+- [https://lijigang-software-design-philosophy.surge.sh/](https://lijigang-software-design-philosophy.surge.sh/)
+- 关于《A Philosophy of Software Design》的可视化学习笔记，李继刚制作。
+
+
+- What Async Promised and What it Delivered — Causality
+- [https://causality.blog/essays/what-async-promised/](https://causality.blog/essays/what-async-promised/)
+- 回顾 async/await 的发展历程，探讨它所承诺的愿景与其最终带来的实际影响。
 
 
 ## 前端开发
@@ -131,6 +181,16 @@ date_modified: 2026-01-26 10:51:47
 - 软件工程师的软技能指北（三）：高效交流篇
 - [https://ramsayleung.github.io/zh/post/2023/软件工程师的软技能指北_高效交流篇3/](https://ramsayleung.github.io/zh/post/2023/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%B8%88%E7%9A%84%E8%BD%AF%E6%8A%80%E8%83%BD%E6%8C%87%E5%8C%97_%E9%AB%98%E6%95%88%E4%BA%A4%E6%B5%81%E7%AF%873/)
 - 软件工程师软技能系列文章，专注于职场中的高效沟通技巧和交流方法
+
+
+- How to Twitter Successfully | near.blog
+- [https://near.blog/how-to-twitter-successfully/](https://near.blog/how-to-twitter-successfully/)
+- 一篇关于如何成功使用 Twitter 进行社交、学习和建立受众的指南。
+
+
+- Salary Negotiation: Make More Money, Be More Valued | Kalzumeus Software
+- [https://www.kalzumeus.com/2012/01/23/salary-negotiation/](https://www.kalzumeus.com/2012/01/23/salary-negotiation/)
+- Patrick McKenzie (patio11) 撰写的经典程序员薪资谈判指南，帮助工程师体现价值并争取更高薪酬。
 
 
 ## 个人思考 / 博客
@@ -160,6 +220,21 @@ date_modified: 2026-01-26 10:51:47
 - 探讨失败背后的根本原因——对自身角色的认知盲区。文章分析了三种自我挫败行为（责备、羞愧、辩解）如何导致无助感，强调通过批判性思维、接受反馈和定期自我反思来提升自我认知，从而掌控人生
 
 
+- Jeremy Bernier 的 X (Twitter) 动态
+- [https://x.com/jeremybernier/status/2057099038445683110](https://x.com/jeremybernier/status/2057099038445683110)
+- 分享大规模裁员前夜在公司内部群组的帖文与个人感受。
+
+
+- Advice That Actually Worked For Me — Nabeel S. Qureshi
+- [https://nabeelqu.co/advice](https://nabeelqu.co/advice)
+- 作者整理的那些真正在生活和工作中对自己行之有效的建议与效率指南。
+
+
+- Principles — Nabeel S. Qureshi
+- [https://nabeelqu.co/principles](https://nabeelqu.co/principles)
+- 作者在生活和工作中努力遵循的一些核心原则和思考框架。
+
+
 ## 工具 / 教程
 
 - 1key cdkey
@@ -170,6 +245,11 @@ date_modified: 2026-01-26 10:51:47
 - 2026最新注册谷歌账号可用方式
 - [https://mailberry.com.cn/2026/01/2026-register-google-account/](https://mailberry.com.cn/2026/01/2026-register-google-account/)
 - 分享 2026 年注册谷歌账号的有效方法，包括通过 Gmail、Play 商店等移动端应用注册的实用技巧
+
+
+- 飞书设备验证
+- [https://accounts.feishu.cn/oauth/v1/device/verify?flow_id=ONUIUKstefllOOOOOOOOOOtn_RmdtH909FOR_P5foCFI&user_code=6GSS-6L2V](https://accounts.feishu.cn/oauth/v1/device/verify?flow_id=ONUIUKstefllOOOOOOOOOOtn_RmdtH909FOR_P5foCFI&user_code=6GSS-6L2V)
+- 飞书扫码或输入设备验证码进行登录。
 
 
 ## 优质博客 / 站点
@@ -187,6 +267,21 @@ date_modified: 2026-01-26 10:51:47
 - Software Architect Roadmap
 - [https://roadmap.sh/software-architect](https://roadmap.sh/software-architect)
 - 软件架构师学习路线图
+
+
+- Links | near.blog
+- [https://near.blog/links/](https://near.blog/links/)
+- 个人精选分享的有趣链接与资源列表。
+
+
+- Hacker News
+- [https://news.ycombinator.com/](https://news.ycombinator.com/)
+- 关注计算机科学和创业的知名技术和创业新闻聚合网站。
+
+
+- 灵感空间站
+- [https://blog.brookezb.com/articles/807014792994821](https://blog.brookezb.com/articles/807014792994821)
+- Brooke的个人博客，分享设计、开发与生活相关的灵感与思考。
 
 
 ## 官方技术博客
@@ -249,102 +344,3 @@ date_modified: 2026-01-26 10:51:47
 - LangChain - Agentic Engineering
 - [https://www.langchain.com/blog/agentic-engineering-redefining-software-engineering](https://www.langchain.com/blog/agentic-engineering-redefining-software-engineering)
 - 代理工程如何重新定义软件工程
-
-
-
-
-## 未分类
-
-- 133. 对谢赛宁的7小时马拉松访谈 - 张小珺Jùn｜商业访谈录 | 小宇宙
-- [https://www.xiaoyuzhoufm.com/episode/69b77577f8b8079bfa8eb837](https://www.xiaoyuzhoufm.com/episode/69b77577f8b8079bfa8eb837)
-- 播客节目访谈：关于世界模型、逃出硅谷、AMI Labs、两次拒绝 Ilya、杨立昆、李飞飞等话题的深度访谈。
-
-
-- Notes from inside China's AI labs - by Nathan Lambert
-- [https://www.interconnects.ai/p/notes-from-inside-chinas-ai-labs](https://www.interconnects.ai/p/notes-from-inside-chinas-ai-labs)
-- Nathan Lambert 分享的关于中国顶尖 AI 实验室的交流心得与见闻。
-
-
-- The Production-Ready RAG & AI Agents Roadmap
-- [https://mayursurani.medium.com/the-production-ready-rag-ai-agents-roadmap-what-actually-breaks-in-real-world-deployments-cb0e92ee1a82](https://mayursurani.medium.com/the-production-ready-rag-ai-agents-roadmap-what-actually-breaks-in-real-world-deployments-cb0e92ee1a82)
-- 探讨在真实世界部署 RAG 系统和 AI Agent 时遇到的实际问题和生产环境就绪路线图。
-
-
-- ginobefun 的 X (Twitter) 动态
-- [https://x.com/hongming731/status/2053314677237846060](https://x.com/hongming731/status/2053314677237846060)
-- 推荐阿里关于 AI Native 时代组织研发思考的文章，探讨突破人类局限的组织形态演进。
-
-
-- Ahmad Awais 的 X (Twitter) 动态
-- [https://x.com/MrAhmadAwais/status/2050956678502420612](https://x.com/MrAhmadAwais/status/2050956678502420612)
-- 关于开源模型工具调用能力的思考，探讨这更多是约束机制（harness）问题而非模型本身能力问题。
-
-
-- 飞书设备验证
-- [https://accounts.feishu.cn/oauth/v1/device/verify?flow_id=ONUIUKstefllOOOOOOOOOOtn_RmdtH909FOR_P5foCFI&user_code=6GSS-6L2V](https://accounts.feishu.cn/oauth/v1/device/verify?flow_id=ONUIUKstefllOOOOOOOOOOtn_RmdtH909FOR_P5foCFI&user_code=6GSS-6L2V)
-- 飞书扫码或输入设备验证码进行登录。
-
-
-- 软件设计的哲学 · 可视化讲解
-- [https://lijigang-software-design-philosophy.surge.sh/](https://lijigang-software-design-philosophy.surge.sh/)
-- 关于《A Philosophy of Software Design》的可视化学习笔记，李继刚制作。
-
-
-- Jeremy Bernier 的 X (Twitter) 动态
-- [https://x.com/jeremybernier/status/2057099038445683110](https://x.com/jeremybernier/status/2057099038445683110)
-- 分享大规模裁员前夜在公司内部群组的帖文与个人感受。
-
-
-- How to Work and Compound with AI
-- [https://eugeneyan.com/writing/working-with-ai/](https://eugeneyan.com/writing/working-with-ai/)
-- Eugene Yan 探讨如何与 AI 协作并产生复利：将上下文视为基础设施，品味作为配置，验证实现自主，并通过委托实现扩展。
-
-
-- How to Twitter Successfully | near.blog
-- [https://near.blog/how-to-twitter-successfully/](https://near.blog/how-to-twitter-successfully/)
-- 一篇关于如何成功使用 Twitter 进行社交、学习和建立受众的指南。
-
-
-- Links | near.blog
-- [https://near.blog/links/](https://near.blog/links/)
-- 个人精选分享的有趣链接与资源列表。
-
-
-- Hacker News
-- [https://news.ycombinator.com/](https://news.ycombinator.com/)
-- 关注计算机科学和创业的知名技术和创业新闻聚合网站。
-
-
-- The One-Person Stack | ivan.codes
-- [https://www.ivan.codes/blog/the-one-person-stack](https://www.ivan.codes/blog/the-one-person-stack)
-- 探讨独立开发者如何独自开发真实产品，以及在不同阶段需要关注的技术栈和重点。
-
-
-- What Async Promised and What it Delivered — Causality
-- [https://causality.blog/essays/what-async-promised/](https://causality.blog/essays/what-async-promised/)
-- 回顾 async/await 的发展历程，探讨它所承诺的愿景与其最终带来的实际影响。
-
-
-- Let the AI cook | ivan.codes
-- [https://www.ivan.codes/blog/let-it-cook](https://www.ivan.codes/blog/let-it-cook)
-- 探讨 AI 编程在合适的技术栈和开发者经验支持下的有效性，指出过分复杂的流程反而会阻碍工作效率。
-
-
-- Salary Negotiation: Make More Money, Be More Valued | Kalzumeus Software
-- [https://www.kalzumeus.com/2012/01/23/salary-negotiation/](https://www.kalzumeus.com/2012/01/23/salary-negotiation/)
-- Patrick McKenzie (patio11) 撰写的经典程序员薪资谈判指南，帮助工程师体现价值并争取更高薪酬。
-
-
-- Advice That Actually Worked For Me — Nabeel S. Qureshi
-- [https://nabeelqu.co/advice](https://nabeelqu.co/advice)
-- 作者整理的那些真正在生活和工作中对自己行之有效的建议与效率指南。
-
-
-- Principles — Nabeel S. Qureshi
-- [https://nabeelqu.co/principles](https://nabeelqu.co/principles)
-- 作者在生活和工作中努力遵循的一些核心原则和思考框架。
-
-
-- 灵感空间站
-- [https://blog.brookezb.com/articles/807014792994821](https://blog.brookezb.com/articles/807014792994821)
-- Brooke的个人博客，分享设计、开发与生活相关的灵感与思考。
