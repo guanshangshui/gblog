@@ -1,0 +1,18 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro'
+import MainSection from '@components/ui/sections/MainSection.astro'
+import ThoughtsContent from '@content/thoughts.md'
+
+const title = '我的想法'
+const description = '记录我对世界的看法、平时的想法与一些个人建议。'
+---
+
+<BaseLayout title={title} description={description}>
+    <MainSection title={title} subTitle={description} />
+
+    <section class="mx-auto max-w-5xl px-4 pb-12 sm:px-6 lg:px-8">
+        <article class="prose prose-blog sm:prose-lg max-w-none">
+            <ThoughtsContent />
+        </article>
+    </section>
+</BaseLayout>
