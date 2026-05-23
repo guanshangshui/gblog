@@ -249,3 +249,102 @@ date_modified: 2026-01-26 10:51:47
 - LangChain - Agentic Engineering
 - [https://www.langchain.com/blog/agentic-engineering-redefining-software-engineering](https://www.langchain.com/blog/agentic-engineering-redefining-software-engineering)
 - 代理工程如何重新定义软件工程
+
+
+
+
+## 未分类
+
+- 133. 对谢赛宁的7小时马拉松访谈 - 张小珺Jùn｜商业访谈录 | 小宇宙
+- [https://www.xiaoyuzhoufm.com/episode/69b77577f8b8079bfa8eb837](https://www.xiaoyuzhoufm.com/episode/69b77577f8b8079bfa8eb837)
+- 播客节目访谈：关于世界模型、逃出硅谷、AMI Labs、两次拒绝 Ilya、杨立昆、李飞飞等话题的深度访谈。
+
+
+- Notes from inside China's AI labs - by Nathan Lambert
+- [https://www.interconnects.ai/p/notes-from-inside-chinas-ai-labs](https://www.interconnects.ai/p/notes-from-inside-chinas-ai-labs)
+- Nathan Lambert 分享的关于中国顶尖 AI 实验室的交流心得与见闻。
+
+
+- The Production-Ready RAG & AI Agents Roadmap
+- [https://mayursurani.medium.com/the-production-ready-rag-ai-agents-roadmap-what-actually-breaks-in-real-world-deployments-cb0e92ee1a82](https://mayursurani.medium.com/the-production-ready-rag-ai-agents-roadmap-what-actually-breaks-in-real-world-deployments-cb0e92ee1a82)
+- 探讨在真实世界部署 RAG 系统和 AI Agent 时遇到的实际问题和生产环境就绪路线图。
+
+
+- ginobefun 的 X (Twitter) 动态
+- [https://x.com/hongming731/status/2053314677237846060](https://x.com/hongming731/status/2053314677237846060)
+- 推荐阿里关于 AI Native 时代组织研发思考的文章，探讨突破人类局限的组织形态演进。
+
+
+- Ahmad Awais 的 X (Twitter) 动态
+- [https://x.com/MrAhmadAwais/status/2050956678502420612](https://x.com/MrAhmadAwais/status/2050956678502420612)
+- 关于开源模型工具调用能力的思考，探讨这更多是约束机制（harness）问题而非模型本身能力问题。
+
+
+- 飞书设备验证
+- [https://accounts.feishu.cn/oauth/v1/device/verify?flow_id=ONUIUKstefllOOOOOOOOOOtn_RmdtH909FOR_P5foCFI&user_code=6GSS-6L2V](https://accounts.feishu.cn/oauth/v1/device/verify?flow_id=ONUIUKstefllOOOOOOOOOOtn_RmdtH909FOR_P5foCFI&user_code=6GSS-6L2V)
+- 飞书扫码或输入设备验证码进行登录。
+
+
+- 软件设计的哲学 · 可视化讲解
+- [https://lijigang-software-design-philosophy.surge.sh/](https://lijigang-software-design-philosophy.surge.sh/)
+- 关于《A Philosophy of Software Design》的可视化学习笔记，李继刚制作。
+
+
+- Jeremy Bernier 的 X (Twitter) 动态
+- [https://x.com/jeremybernier/status/2057099038445683110](https://x.com/jeremybernier/status/2057099038445683110)
+- 分享大规模裁员前夜在公司内部群组的帖文与个人感受。
+
+
+- How to Work and Compound with AI
+- [https://eugeneyan.com/writing/working-with-ai/](https://eugeneyan.com/writing/working-with-ai/)
+- Eugene Yan 探讨如何与 AI 协作并产生复利：将上下文视为基础设施，品味作为配置，验证实现自主，并通过委托实现扩展。
+
+
+- How to Twitter Successfully | near.blog
+- [https://near.blog/how-to-twitter-successfully/](https://near.blog/how-to-twitter-successfully/)
+- 一篇关于如何成功使用 Twitter 进行社交、学习和建立受众的指南。
+
+
+- Links | near.blog
+- [https://near.blog/links/](https://near.blog/links/)
+- 个人精选分享的有趣链接与资源列表。
+
+
+- Hacker News
+- [https://news.ycombinator.com/](https://news.ycombinator.com/)
+- 关注计算机科学和创业的知名技术和创业新闻聚合网站。
+
+
+- The One-Person Stack | ivan.codes
+- [https://www.ivan.codes/blog/the-one-person-stack](https://www.ivan.codes/blog/the-one-person-stack)
+- 探讨独立开发者如何独自开发真实产品，以及在不同阶段需要关注的技术栈和重点。
+
+
+- What Async Promised and What it Delivered — Causality
+- [https://causality.blog/essays/what-async-promised/](https://causality.blog/essays/what-async-promised/)
+- 回顾 async/await 的发展历程，探讨它所承诺的愿景与其最终带来的实际影响。
+
+
+- Let the AI cook | ivan.codes
+- [https://www.ivan.codes/blog/let-it-cook](https://www.ivan.codes/blog/let-it-cook)
+- 探讨 AI 编程在合适的技术栈和开发者经验支持下的有效性，指出过分复杂的流程反而会阻碍工作效率。
+
+
+- Salary Negotiation: Make More Money, Be More Valued | Kalzumeus Software
+- [https://www.kalzumeus.com/2012/01/23/salary-negotiation/](https://www.kalzumeus.com/2012/01/23/salary-negotiation/)
+- Patrick McKenzie (patio11) 撰写的经典程序员薪资谈判指南，帮助工程师体现价值并争取更高薪酬。
+
+
+- Advice That Actually Worked For Me — Nabeel S. Qureshi
+- [https://nabeelqu.co/advice](https://nabeelqu.co/advice)
+- 作者整理的那些真正在生活和工作中对自己行之有效的建议与效率指南。
+
+
+- Principles — Nabeel S. Qureshi
+- [https://nabeelqu.co/principles](https://nabeelqu.co/principles)
+- 作者在生活和工作中努力遵循的一些核心原则和思考框架。
+
+
+- 灵感空间站
+- [https://blog.brookezb.com/articles/807014792994821](https://blog.brookezb.com/articles/807014792994821)
+- Brooke的个人博客，分享设计、开发与生活相关的灵感与思考。
