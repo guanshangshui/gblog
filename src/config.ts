@@ -2,7 +2,7 @@ import type { NavigationLink, Site } from './types.ts'
 
 export const SITE: Site = {
     author: '',
-    url: 'https://zerodotsix.top',
+    url: 'https://zerodotsixai.com',
     title: '0.6的blog',
     description: '奇妙的地方',
     shortDescription: '奇妙的地方',
