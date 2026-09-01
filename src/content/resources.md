@@ -135,6 +135,16 @@ date_modified: 2026-01-26 10:51:47
 - 探讨 AI 编程在合适的技术栈和开发者经验支持下的有效性，指出过分复杂的流程反而会阻碍工作效率。
 
 
+- Ahmad Awais 的 X (Twitter) 动态
+- [https://x.com/MrAhmadAwais/status/2058681221673271523](https://x.com/MrAhmadAwais/status/2058681221673271523)
+- 探讨为何 AI 生成的设计看起来都一样，是模型问题还是约束机制（harness）问题，并分享用 `/design` 修复 LLM 设计同质化的思路。
+
+
+- 当 AI 拿走一切之后 | Airing
+- [https://ursb.me/posts/after-ai-takes-everything/](https://ursb.me/posts/after-ai-takes-everything/)
+- 从三位读者的困惑出发，探讨 AI 逐步取代执行环节后人类还剩下什么，提出判断力、品味与推演三种难以被替代的能力，并反思认知外包对个体主体性的侵蚀。
+
+
 ## 独立开发 / 出海
 
 - 我的第一个出海产品，是怎样冷启动赚到第一个 100 美元的？
@@ -150,6 +160,11 @@ date_modified: 2026-01-26 10:51:47
 - The One-Person Stack | ivan.codes
 - [https://www.ivan.codes/blog/the-one-person-stack](https://www.ivan.codes/blog/the-one-person-stack)
 - 探讨独立开发者如何独自开发真实产品，以及在不同阶段需要关注的技术栈和重点。
+
+
+- It’s fine to build apps just for the money | Kickstart
+- [https://www.kickstart.tools/blog/its-fine-to-build-apps-just-for-the-money](https://www.kickstart.tools/blog/its-fine-to-build-apps-just-for-the-money)
+- Paul Hudson 认为开发者不必为“只为赚钱做产品”道歉：水管工不需要热爱水管，赚钱本身就是把应用做出来的正当理由。
 
 
 ## 软件工程 / 技术
@@ -235,6 +250,11 @@ date_modified: 2026-01-26 10:51:47
 - 作者在生活和工作中努力遵循的一些核心原则和思考框架。
 
 
+- 降级论
+- [https://meditic.com/degrading-for-success](https://meditic.com/degrading-for-success)
+- 作者用 IT 创业者的盈利困境为例，提出“降级论”：与其在更高级圈子里当陪练，不如下沉到自己能赢的赛道，把能力用在真正有优势的地方。
+
+
 ## 工具 / 教程
 
 - 1key cdkey
@@ -247,9 +267,9 @@ date_modified: 2026-01-26 10:51:47
 - 分享 2026 年注册谷歌账号的有效方法，包括通过 Gmail、Play 商店等移动端应用注册的实用技巧
 
 
-- 飞书设备验证
-- [https://accounts.feishu.cn/oauth/v1/device/verify?flow_id=ONUIUKstefllOOOOOOOOOOtn_RmdtH909FOR_P5foCFI&user_code=6GSS-6L2V](https://accounts.feishu.cn/oauth/v1/device/verify?flow_id=ONUIUKstefllOOOOOOOOOOtn_RmdtH909FOR_P5foCFI&user_code=6GSS-6L2V)
-- 飞书扫码或输入设备验证码进行登录。
+- zhreader
+- [https://zhreader-3pwgrlt3.manus.space/](https://zhreader-3pwgrlt3.manus.space/)
+- Manus 上托管的中文阅读器站点
 
 
 ## 优质博客 / 站点
@@ -282,6 +302,21 @@ date_modified: 2026-01-26 10:51:47
 - 灵感空间站
 - [https://blog.brookezb.com/articles/807014792994821](https://blog.brookezb.com/articles/807014792994821)
 - Brooke的个人博客，分享设计、开发与生活相关的灵感与思考。
+
+
+- guide.world
+- [https://guide.world/](https://guide.world/)
+- Patrick Collison 整理的旅行写作精选集，收录各地见闻与长文笔记。
+
+
+- Dan Wang
+- [https://danwang.co/about/](https://danwang.co/about/)
+- Dan Wang 的个人站点简介：Hoover Institution 研究员，《Breakneck: China's Quest to Engineer the Future》作者，长期观察中国科技与产业能力。
+
+
+- Airing
+- [https://ursb.me/](https://ursb.me/)
+- 新加坡软件工程师 Airing 的个人主页与博客，记录独立开发、AI 与生活思考。
 
 
 ## 官方技术博客
@@ -344,3 +379,23 @@ date_modified: 2026-01-26 10:51:47
 - LangChain - Agentic Engineering
 - [https://www.langchain.com/blog/agentic-engineering-redefining-software-engineering](https://www.langchain.com/blog/agentic-engineering-redefining-software-engineering)
 - 代理工程如何重新定义软件工程
+
+
+- ClickHouse - Agentic coding at ClickHouse
+- [https://clickhouse.com/blog/agentic-coding](https://clickhouse.com/blog/agentic-coding)
+- ClickHouse 创始人 Alexey Milovidov 分享公司如何在真实工程中使用编码智能体，以及在 AI 时代保持竞争力的实践。
+
+
+- Cursor - 任意规模的 Git
+- [https://cursor.com/cn/blog/git-at-any-scale](https://cursor.com/cn/blog/git-at-any-scale)
+- Cursor 团队解析大规模托管 Git 仓库的难点，从 packfile 设计、分布式存储到 GitHub 的文件系统实践。
+
+
+- Cerebras - How we built our knowledge base
+- [https://www.cerebras.ai/blog/how-we-built-our-knowledge-base](https://www.cerebras.ai/blog/how-we-built-our-knowledge-base)
+- Cerebras 分享企业知识库的搭建方式，把 Slack、代码仓库、文档和自定义数据源接到同一套 AI 检索系统里。
+
+
+- 设计数据密集型应用（第二版）
+- [https://ddia.vonng.com/](https://ddia.vonng.com/)
+- DDIA 第二版中文翻译，系统讲解数据模型、存储、事务、分布式系统、批处理与流处理。
